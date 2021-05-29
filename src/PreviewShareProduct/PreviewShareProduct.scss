@@ -1,0 +1,109 @@
+.psprounded {
+	border-radius: 15px;
+  
+}
+.PSP-button {
+	height: auto;
+	width: 20%;
+	font-size: 20px;
+	font-weight: 600;
+}
+.Grey-div {
+  width: 50%;
+	background: #F3F5F8;
+}
+.whitediv {
+	width: 50%;
+	height: 50px;
+	padding: 0 2% 0 2%;
+}
+
+.PreviewShareProduct-table {
+	width: 96%;
+}
+.large-text {
+	font-size: 25px;
+}
+.medium-text {
+	font-size: 22px;
+}
+.small-text {
+	font-size: 16px;
+}
+.font-medium {
+	font-weight: 500;
+}
+.btn-confirm {
+	margin-right: 5%;
+	order: 1;
+	color: white;
+	background: #1AC29A;
+	border-color: #1AC29A;
+	&:hover {
+		background: #1AC29A;
+		border-color: #1AC29A;
+	}
+}
+.btn-edit {
+	color: rgba(10, 33, 62, 0.6);
+	background: #F3F5F8;
+	border-color: #F3F5F8;
+	&:hover {
+		color: rgba(10, 33, 62, 0.6);
+		background: #F3F5F8;
+		border-color: #F3F5F8;
+	}
+}
+.PreviewShareProduct-btns {
+	display: flex;
+}
+@media only screen and (max-width: 950px) {
+	.PSP-button {
+		width: 30%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.PSP-button {
+		width: 40%;
+	}
+	.table-col {
+		width: 25%;
+	}
+}
+@media only screen and (max-width: 425px) {
+	.Grey-div {
+		overflow-x: auto;
+		height: auto;
+		display: flex;
+		flex-wrap: nowrap;
+		padding: 0 5% 0 5%;
+	}
+	.Whitediv {
+		overflow-x: auto;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 5% 0 5%;
+	}
+	.btn-confirm {
+		width: 90%;
+		margin-left: 0% !important;
+		margin-bottom: 4vw;
+		&:hover {
+			background: #1AC29A;
+			border-color: #1AC29A;
+		}
+	}
+	.btn-edit {
+		width: 90%;
+		&:focus {
+			color: rgba(10, 33, 62, 0.6);
+			background: #F3F5F8;
+			border-color: #F3F5F8;
+		}
+	}
+	.PreviewShareProduct-btns {
+		display: block;
+		margin-left: 10%;
+	}
+}
