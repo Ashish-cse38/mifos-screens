@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import './PreviewShareProduct.scss';
@@ -6,6 +6,7 @@ import { useHistory } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faArrowRight, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 function PreviewShareProduct() {
   let history = useHistory();
@@ -21,27 +22,29 @@ function PreviewShareProduct() {
         style={{background: '#F3F5F8'}}
       >
         <h4 
-          className="py-4 overflow-auto"
-          style={{transform: 'none'}}
+          className="py-4 text-break"
         >
           Preview Share Product
         </h4>
 
-        <div
-          className="h-75 w-100 mx-auto py-1 psprounded"
+        <motion.div
+          className="h-75 w-100 mx-auto py-1 PSP-rounded"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
           style={{background: '#FFFFFF'}}
         >
           <div
             className="w-100 my-5"
           >
             <h5
-              className="mb-4 ml-5 font-weight-medium medium-text overflow-auto"
+              className="section-heading mb-4 mx-auto font-weight-medium text-break"
             >
               Details
             </h5>
 
             <div
-              className="Grey-div mx-auto px-4 py-3 d-flex rounded-right"
+              className="greydiv mx-auto py-3 d-flex rounded-right"
               style={{}}
             >
               <h6
@@ -59,8 +62,7 @@ function PreviewShareProduct() {
             </div>
 
             <div
-              className="whitediv py-3 d-flex"
-              style={{background: '#FBFBFB'}}
+              className="whitediv mx-auto py-3 d-flex"
             >
               <h6
                 className="w-50 font-weight-medium"
@@ -76,7 +78,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mt-3"
+              className="mt-3 mx-auto"
               style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width: '90%'}}
             >
             </div>
@@ -86,13 +88,13 @@ function PreviewShareProduct() {
             className="w-100 my-5"
           >
             <h5 
-              className="main mb-4 font-weight-medium medium-text overflow-auto"
+              className="section-heading mb-4 mx-auto font-weight-medium text-break"
             >
               Items
             </h5>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -109,8 +111,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}
+              className="whitediv mx-auto py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -127,7 +128,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -145,8 +146,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}
+              className="whitediv mx-auto py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -162,7 +162,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -180,8 +180,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}
+              className="whitediv mx-auto py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -197,7 +196,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -214,7 +213,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mt-4" 
+              className="mt-4 mx-auto" 
               style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width: '90%'}}
             >
             </div>
@@ -225,13 +224,13 @@ function PreviewShareProduct() {
             className="w-100 my-5"
           >
             <h5 
-              className="mb-4 font-weight-medium medium-text overflow-auto"
+              className="section-heading mb-4 mx-auto font-weight-medium text-break"
             >
               Settings
             </h5>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -248,8 +247,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}
+              className="whitediv mx-auto py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -265,7 +263,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -283,8 +281,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}
+              className="whitediv mx-auto py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -300,7 +297,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mt-4" 
+              className="mt-4 mx-auto" 
               style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width:'90%'}}
             >           
             </div>
@@ -311,8 +308,7 @@ function PreviewShareProduct() {
             style={{width: '100%'}}
           >
             <h5 
-              className="mb-4 mx-auto font-weight-medium medium-text overflow-x-auto"
-              style={{width: '90%'}}
+              className="section-heading mb-4 mx-auto font-weight-medium overflow-x-auto"
             >
               Market Price
             </h5>
@@ -328,12 +324,12 @@ function PreviewShareProduct() {
                 <thead style={{color: 'rgba(10, 33, 62, 0.6)'}}>
                   <tr>
                     <th 
-                      className="py-3 font-medium"
+                      className="py-3 font-weight-medium"
                     >
                       From Date
                     </th>
                     <th 
-                      className="py-3 font-medium text-right"
+                      className="py-3 font-weight-medium text-right"
                       style={{paddingRight: '6%'}}
                     >
                       Nominal/Unit Price
@@ -382,8 +378,7 @@ function PreviewShareProduct() {
             style={{width: '100%'}}
           >
             <h5 
-              className="mb-4 mx-auto font-weight-medium medium-text overflow-auto"
-              style={{width: '90%'}}
+              className="section-heading mb-4 mx-auto font-weight-medium text-break"
             >
               Charges
             </h5>
@@ -399,22 +394,22 @@ function PreviewShareProduct() {
                 <thead style={{color: 'rgba(10, 33, 62, 0.6)'}}>
                   <tr>
                     <th 
-                      className="table-col py-3 font-medium"
+                      className="table-col py-3 font-weight-medium"
                     >
                       Name
                     </th>
                     <th 
-                      className="table-col py-3 font-medium text-right"
+                      className="table-col py-3 font-weight-medium text-right"
                     >
                       Type
                     </th>
                     <th 
-                      className="table-col py-3 font-medium text-right"
+                      className="table-col py-3 font-weight-medium text-right"
                     >
                       Amount
                     </th>
                     <th 
-                      className="table-col py-3 font-medium text-right" 
+                      className="table-col py-3 font-weight-medium text-right" 
                       style={{paddingRight: '6%'}}
                     >
                       Collected On
@@ -480,13 +475,13 @@ function PreviewShareProduct() {
             className="w-100 my-5"
           >
             <h5 
-              className="mb-4 font-weight-medium medium-text overflow-auto"
+              className="section-heading mb-4 mx-auto font-weight-medium text-break"
             >
               Accounting
             </h5>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right"
               style={{background: '#F3F5F8'}}>
               <h6 
                 className="w-50 font-weight-medium"
@@ -502,8 +497,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}>
+              className="whitediv mx-auto py-3 d-flex">
               <h6 
                 className="w-50 font-weight-medium"
               >
@@ -518,7 +512,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mx-5 px-4 py-3 d-flex rounded-right d-flex"
+              className="greydiv mx-auto py-3 d-flex rounded-right"
               style={{background: '#F3F5F8'}}>
               <h6 
                 className="w-50 font-weight-medium"
@@ -534,8 +528,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="White-div py-3 d-flex"
-              style={{background: '#FBFBFB'}}>
+              className="whitediv mx-auto py-3 d-flex">
               <h6 
                 className="w-50 font-weight-medium"
               >
@@ -550,7 +543,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mt-3" 
+              className="mt-3 mx-auto" 
               style={{width: '90%', border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
@@ -561,23 +554,26 @@ function PreviewShareProduct() {
             <div 
               className="PreviewShareProduct-btns my-5"
             >
-              <Button 
-                className="PSP-button py-3 ml-4 btn-confirm font-weight-semibold overflow-auto"
+              <motion.button 
+                className="PSP-button py-3 ml-4 btn-confirm rounded border-0 font-weight-semibold text-break"
+                whileHover={{ scale: 1.1, paddingLeft: '5%'  }}
+                whileTap={{ scale: 0.9 }}
+                transition={{delay: 0}}
                 onClick={goto_rdr}
               >
                 Confirm
                 <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-              </Button>
+              </motion.button>
              
               <Button 
-                className="PSP-button py-3 ml-auto btn-edit font-weight-medium overflow-auto" 
+                className="PSP-button py-3 ml-auto btn-edit font-weight-medium text-break" 
               >
                 <FontAwesomeIcon className="mr-3" icon={faEdit} />
                 Edit
               </Button>
             </div>
           </div>  
-        </div>
+        </motion.div>
       </div>
     
   );

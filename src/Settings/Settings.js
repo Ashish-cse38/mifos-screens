@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
-import './Settings.css';
+import './Settings.scss';
 import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faCheck, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
 function Settings() {
 
@@ -16,8 +17,8 @@ function Settings() {
   const [apply_wt, set_apply_wt] = React.useState('none');
   const [val1, set_val1] = React.useState(true);
 
-  function goto_cd() {
-    history.push('/currency-details');
+  function goto_terms() {
+    history.push('/terms');
   } 
 
   function API_div() {
@@ -56,16 +57,19 @@ function Settings() {
         <div 
           className="RDP"
         >
-          <h2 
-            className="py-4 large-text"
+          <h4 
+            className="py-4"
           >
             Create Recurring Deposit Products
-          </h2>
+          </h4>
 
         </div>
         
-        <div
+        <motion.div
           className="h-auto bg-white mx-auto overflow-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
         >
           <div className="terms-checkbox-container">
             <div 
@@ -243,7 +247,7 @@ function Settings() {
           >
           </div>
 
-          <div className="ml-5 ">
+          <div className="ml-5">
             <h5>Lock-in Period</h5>
           </div>
 
@@ -258,14 +262,7 @@ function Settings() {
                 <div className="two-col-div-item mr-4">
                   <input
                     id="product-name"
-                    className="search-bar form-control" type="search"
-                    style={{
-                      background: '#FCFCFC',
-                      border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                      fontSize: '18px',
-                      padding: '3% 4% 3% 4%',
-                      borderRadius: '5px',
-                    }}
+                    className="form-control" type="search"
                   />
 
                 </div>
@@ -296,7 +293,7 @@ function Settings() {
           >
           </div>
 
-          <div className="ml-5  ">
+          <div className="ml-5">
             <h5>Minimum Deposit Term</h5>
           </div>
 
@@ -312,14 +309,7 @@ function Settings() {
                 <div className="two-col-div-item mr-4">
                   <input
                     id="product-name"
-                    className="search-bar form-control" type="search"
-                    style={{
-                      background: '#FCFCFC',
-                      border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                      fontSize: '18px',
-                      padding: '3% 4% 3% 4%',
-                      borderRadius: '5px',
-                    }}
+                    className="form-control" type="search"
                   />
 
                 </div>
@@ -350,7 +340,7 @@ function Settings() {
           >
           </div>
 
-          <div className="ml-5  ">
+          <div className="ml-5">
             <h5>And thereafter, In Multiples of</h5>
           </div>
 
@@ -366,14 +356,7 @@ function Settings() {
                 <div className="two-col-div-item mr-4">
                   <input
                     id="product-name"
-                    className="search-bar form-control" type="search"
-                    style={{
-                      background: '#FCFCFC',
-                      border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                      fontSize: '18px',
-                      padding: '3% 4% 3% 4%',
-                      borderRadius: '5px',
-                    }}
+                    className="form-control" type="search"
                   />
 
                 </div>
@@ -404,7 +387,7 @@ function Settings() {
           >
           </div>
 
-          <div className="ml-5  ">
+          <div className="ml-5">
             <h5>Maximum Deposit Term</h5>
           </div>
 
@@ -420,14 +403,7 @@ function Settings() {
                 <div className="two-col-div-item mr-4">
                   <input
                     id="product-name"
-                    className="search-bar form-control" type="search"
-                    style={{
-                      background: '#FCFCFC',
-                      border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                      fontSize: '18px',
-                      padding: '3% 4% 3% 4%',
-                      borderRadius: '5px',
-                    }}
+                    className="form-control" type="search"
                   />
 
                 </div>
@@ -470,20 +446,15 @@ function Settings() {
             </div>
 
             <div className="apply_pi">
-              <div className="py-4" style={{
-                display: `${apply_pi}`,
-                width: '100%', 
-                height: 'auto',
-                background: 'rgba(81, 142, 248, 0.1)',
-                border: '1px solid #518EF8',
-                borderRadius: '15px'
-                }}
+              <div 
+                className="click-appear-div w-100 py-4"  
+                style={{ display: `${apply_pi}` }}
               >
                 <div className="two-col-div w-100 px-5">
                   <div className="two-col-div-item mr-4">
                     <input
                       id="product-name"
-                      className="search-bar form-control" type="search"
+                      className="form-control" type="search"
                       style={{
                         background: '#FCFCFC',
                         border: '0.5px solid rgba(10, 33, 62, 0.15)',
@@ -540,14 +511,7 @@ function Settings() {
                 <div className="two-col-div-item mr-4">
                   <input
                     id="product-name"
-                    className="search-bar form-control" type="search"
-                    style={{
-                      background: '#FCFCFC',
-                      border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                      fontSize: '18px',
-                      padding: '3% 4% 3% 4%',
-                      borderRadius: '5px',
-                    }}
+                    className="form-control" type="search"
                   />
 
                 </div>
@@ -569,14 +533,8 @@ function Settings() {
               <label class="custom-control-label settings-text-small" for="customSwitch5">Is Withold tax applicable</label>
             </div>
             <div className="apply_wt">
-              <div className="py-4" style={{
-                display: `${apply_wt}`,
-                width: '100%', 
-                height: 'auto',
-                background: 'rgba(81, 142, 248, 0.1)',
-                border: '1px solid #518EF8',
-                borderRadius: '15px'
-                }}
+              <div className="click-appear-div w-100 py-4" 
+                style={{ display: `${apply_wt}`}}
               >
                 <div className="d-flex w-100 px-5 justify-content-between">
 
@@ -618,24 +576,30 @@ function Settings() {
             <div 
               className="terms-btn-section my-5"
             >
-              <Button 
-                className="terms-button py-3 ml-4 mr-5 btn-next font-weight-semibold overflow-auto"
+              <motion.button 
+                className="terms-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold overflow-auto"
+                whileHover={{ scale: 1.1, paddingLeft: '5%'  }}
+                whileTap={{ scale: 0.9 }}
+                transition={{delay: 0}}
               >
                 Next
                 <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-              </Button>
+              </motion.button>
             
-              <Button 
-                onClick={goto_cd}
-                className="terms-button py-3 ml-auto btn-prev font-weight-medium overflow-auto" 
+              <motion.button 
+                onClick={goto_terms}
+                className="terms-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium overflow-auto" 
+                whileHover={{ scale: 1.1, paddingRight: '5%'  }}
+                whileTap={{ scale: 0.9 }}
+                transition={{delay: 0}}
               >
                 <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                 Previous
-              </Button>
+              </motion.button>
             </div>
 
           </div>
-        </div>
+        </motion.div>
       </div>
     
   );

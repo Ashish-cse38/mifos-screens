@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import PreviewShareProduct from './PreviewShareProduct/PreviewShareProduct';
 import RecurringDepositProducts from './RecurringDepositProducts/RecurringDepositProducts';
-import CreateRecurringDepositProducts from './CreateRecurringDepositProducts/CreateRecurringDepositProducts';
+import PersonalDetails from './PersonalDetails/PersonalDetails';
 import CurrencyDetails from './CurrencyDetails/CurrencyDetails';
 import Terms from './Terms/Terms';
 import Settings from './Settings/Settings';
@@ -19,7 +19,7 @@ function App() {
 
         <Route path="/recurring-deposit-products" component={RecurringDepositProducts} />
          
-        <Route path="/create-recurring-deposit-products" component={CreateRecurringDepositProducts} />
+        <Route path="/personal-details" component={PersonalDetails} />
 
         <Route path="/currency-details" component={CurrencyDetails} />
 

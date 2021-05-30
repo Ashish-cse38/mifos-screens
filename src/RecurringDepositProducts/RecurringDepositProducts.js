@@ -1,11 +1,11 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './RecurringDepositProducts.css';
+import './RecurringDepositProducts.scss';
 import { useHistory } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPen, faPlusCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
-
+import { motion } from 'framer-motion';
 
 function RecurringDepositProducts() {
 
@@ -29,8 +29,8 @@ function RecurringDepositProducts() {
     setUsers(items)
   }, [])
   
-  function goto_crdr() {
-    history.push("/create-recurring-deposit-products");
+  function goto_pd() {
+    history.push("/personal-details");
   }
 
   function filterFunction() {
@@ -59,22 +59,29 @@ function RecurringDepositProducts() {
         <div 
           className="RDP w-auto"
         >
-          <h2 
-            className="py-4 large-text"
+          <h4 
+            className="py-4"
           >
             Recurring Deposit Products
-          </h2>
+          </h4>
 
-          <div 
+          <motion.div 
             className="create h-25 mt-2 py-2 px-3 ml-auto"
-            onClick={goto_crdr} >
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3 }}
+            onClick={goto_pd} >
             <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
             Create Recurring Deposit Products
-          </div>
+          </motion.div>
 
         </div>
 
-        <div className="search input-group input-group-lg mx-auto d-flex"
+        <motion.div 
+          className="search input-group input-group-lg mx-auto d-flex"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
         >
           <span 
             className="input-span input-group-append bg-white border-right-0 mb-4 pl-2" 
@@ -99,10 +106,13 @@ function RecurringDepositProducts() {
             }}
           />
          
-        </div>
+        </motion.div>
         
-        <div
+        <motion.div
           className="w-100 bg-white mx-auto py-1 table-div"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
         >
           <div 
             className="my-4 mx-auto"
@@ -190,7 +200,7 @@ function RecurringDepositProducts() {
               </tbody>
             </Table>
           </div>
-        </div>
+        </motion.div>
       </div>
     
   );

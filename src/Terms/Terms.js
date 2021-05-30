@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
-import './Terms.css';
+import './Terms.scss';
 import { useHistory } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faCheck, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-
+import { motion } from 'framer-motion';
 
 function Terms() {
 
@@ -27,20 +27,22 @@ function Terms() {
         style={{background: '#F3F5F8', backgroundSize: 'cover'}}
       >
 
-        
         <div 
           className="RDP"
         >
-          <h2 
-            className="py-4 large-text"
+          <h4 
+            className="py-4"
           >
             Create Recurring Deposit Products
-          </h2>
+          </h4>
 
         </div>
         
-        <div
+        <motion.div
           className="h-auto bg-white mx-auto overflow-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
         >
           <div className="terms-checkbox-container">
             <div 
@@ -193,14 +195,7 @@ function Terms() {
               </label>
               <input
                 id="short-name"
-                className="search-bar form-control" type="search"
-                style={{
-                  background: '#FCFCFC',
-                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                  fontSize: '18px',
-                  padding: '5% 4% 5% 4%',
-                  borderRadius: '5px',
-                }}
+                className="form-control" type="search"
               />
 
             </div>
@@ -212,14 +207,7 @@ function Terms() {
               </label>
               <input
                 id="short-name"
-                className="search-bar form-control" type="search"
-                style={{
-                  background: '#FCFCFC',
-                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                  fontSize: '18px',
-                  padding: '5% 4% 5% 4%',
-                  borderRadius: '5px',
-                }}
+                className="form-control" type="search"
               />
 
             </div>
@@ -232,14 +220,7 @@ function Terms() {
             </label>
               <input
                 id="description"
-                className="search-bar form-control" type="search"
-                style={{
-                  background: '#FCFCFC',
-                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                  fontSize: '18px',
-                  padding: '5% 4% 5% 4%',
-                  borderRadius: '5px',
-                }}
+                className="form-control" type="search"
               />
 
             </div>
@@ -351,25 +332,31 @@ function Terms() {
             <div 
               className="terms-btn-section my-5"
             >
-              <Button 
+              <motion.button 
                 onClick={goto_settings}
-                className="terms-button py-3 ml-4 mr-5 btn-next font-weight-semibold overflow-auto"
+                className="terms-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold overflow-auto"
+                whileHover={{ scale: 1.1, paddingLeft: '5%'  }}
+                whileTap={{ scale: 0.9 }}
+                transition={{delay: 0}}
               >
                 Next
                 <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-              </Button>
+              </motion.button>
             
-              <Button 
+              <motion.button 
                 onClick={goto_cd}
-                className="terms-button py-3 ml-auto btn-prev font-weight-medium overflow-auto" 
+                className="terms-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium overflow-auto" 
+                whileHover={{ scale: 1.1, paddingRight: '5%'  }}
+                whileTap={{ scale: 0.9 }}
+                transition={{delay: 0}}
               >
                 <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                 Previous
-              </Button>
+              </motion.button>
             </div>
 
           </div>
-        </div>
+        </motion.div>
       </div>
     
   );

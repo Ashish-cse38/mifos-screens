@@ -1,12 +1,13 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
-import './CreateRecurringDepositProducts.css';
+import './PersonalDetails.scss';
 import { useHistory } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { motion } from 'framer-motion';
 
-function CreateRecurringDepositProducts() {
+function PersonalDetails() {
   let history = useHistory();
 
   function goto_currency_details() {
@@ -21,7 +22,7 @@ function CreateRecurringDepositProducts() {
   return (
       <div 
         id="CreateRecurringDepositProducts"
-        className="create_rdr px-3 py-5 overflow-auto"
+        className="create_PD px-3 py-5 overflow-auto"
         style={{background: '#F3F5F8', backgroundSize: 'cover'}}
       >
 
@@ -29,20 +30,23 @@ function CreateRecurringDepositProducts() {
         <div 
           className="RDP"
         >
-          <h2 
-            className="py-4 large-text"
+          <h4 
+            className="py-4"
           >
             Create Recurring Deposit Products
-          </h2>
+          </h4>
 
         </div>
         
-        <div
+        <motion.div
           className="h-auto w-100 bg-white mx-auto py-2"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
         >
-          <div className="crdr-checkbox-container">
+          <div className="PD-checkbox-container">
           <div 
-            className="crdr-checkbox-div h-auto mx-auto d-flex my-4"
+            className="PD-checkbox-div h-auto mx-auto d-flex my-4"
           >
             <div style={{width: '14%'}}>
               <div className="d-flex">
@@ -169,7 +173,7 @@ function CreateRecurringDepositProducts() {
           </div>
 
           <div 
-              className="crdr-line mt-2 mb-5" 
+              className="PD-line mt-2 mb-5" 
               style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
           </div>
@@ -180,40 +184,26 @@ function CreateRecurringDepositProducts() {
             <h5>Product Details</h5>
           </div>
 
-          <div className="crdr-input-section mx-5 my-4">
-            <div className="crdr-input-field mr-4">
+          <div className="PD-input-section mx-5 my-4">
+            <div className="PD-input-field mr-4">
               <label>
                 Product Name
                 <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
               <input
                 id="product-name"
-                className="search-bar form-control" type="search"
-                style={{
-                  background: '#FCFCFC',
-                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                  fontSize: '18px',
-                  padding: '6% 4% 6% 4%',
-                  borderRadius: '5px',
-                }}
+                className="form-control" type="search"
               />
 
             </div>
-            <div className="crdr-input-field">
+            <div className="PD-input-field">
               <label>
                 Short Name
                 <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
               </label>
               <input
                 id="short-name"
-                className="search-bar form-control" type="search"
-                style={{
-                  background: '#FCFCFC',
-                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                  fontSize: '18px',
-                  padding: '6% 4% 6% 4%',
-                  borderRadius: '5px',
-                }}
+                className="form-control" type="search"
               />
 
             </div>
@@ -227,49 +217,52 @@ function CreateRecurringDepositProducts() {
               <textarea
                 id="description"
                 rows="2"
-                className="search-bar form-control" type="search"
+                className="form-control" type="search"
                 style={{
-                  background: '#FCFCFC',
-                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                  fontSize: '18px',
-                  padding: '2% 2% 2% 2%',
-                  borderRadius: '5px',
+                  padding: '2% 2% 2% 2%'
                 }}
               />
 
             </div>
 
             <div 
-              className="crdr-line my-5" 
+              className="PD-line my-5" 
               style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
             <div>
               <div 
-                className="CRDR-btn-section my-5"
+                className="PD-btn-section my-5"
               >
-                <Button 
+                <motion.button 
                   onClick={goto_currency_details}
-                  className="CRDR-button py-3 ml-4 mr-5 btn-next font-weight-semibold overflow-auto"
+                  className="PD-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold overflow-auto"
+                  whileHover={{ scale: 1.1, paddingLeft: '5%'  }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{delay: 0}}
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-                </Button>
+                </motion.button>
               
-                <Button 
+                <motion.button 
                   onClick={goto_rdr}
-                  className="CRDR-button py-3 ml-auto btn-prev font-weight-medium overflow-auto" 
+                  className="PD-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium overflow-auto" 
+                  whileHover={{ scale: 1.1, paddingRight: '5%'  }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{delay: 0}}
                 >
-                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />Previous
-                </Button>
+                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
+                  Previous
+                </motion.button>
               </div>
 
             </div>
-        </div>
+        </motion.div>
       </div>
     
   );
 }
 
-export default CreateRecurringDepositProducts;
+export default PersonalDetails;
