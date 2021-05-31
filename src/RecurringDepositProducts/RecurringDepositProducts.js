@@ -69,7 +69,7 @@ function RecurringDepositProducts() {
             className="create h-25 mt-2 py-2 px-3 ml-auto"
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0 }}
             onClick={goto_pd} >
             <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
             Create Recurring Deposit Products

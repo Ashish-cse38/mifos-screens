@@ -269,8 +269,9 @@ function Settings() {
 
                 <div className="two-col-div-item">
                   <select 
-                    className="select custom-select custom-select-lg"
+                    className="select custom-select custom-select-lg px-3"
                     style={{
+                      padding: '3% 0 3% 0',
                       backgroundColor: '#FCFCFC',
                       border: '0.5px solid rgba(10, 33, 62, 0.15)',
                       borderRadius: '5px',
@@ -299,10 +300,11 @@ function Settings() {
 
           <div className="mx-5">
 
-            <div className="py-4" style={{
-              display: `flex`,
-              width: '100%', 
-              height: 'auto',
+            <div className="py-4" 
+              style={{
+                display: `flex`,
+                width: '100%', 
+                height: 'auto',
               }}
             >
               <div className="two-col-div w-75">
@@ -316,8 +318,9 @@ function Settings() {
 
                 <div className="two-col-div-item">
                   <select 
-                    className="select custom-select custom-select-lg"
+                    className="select custom-select custom-select-lg px-3"
                     style={{
+                      padding: '3% 0 3% 0',
                       backgroundColor: '#FCFCFC',
                       border: '0.5px solid rgba(10, 33, 62, 0.15)',
                       borderRadius: '5px',
@@ -363,8 +366,9 @@ function Settings() {
 
                 <div className="two-col-div-item">
                   <select 
-                    className="select custom-select custom-select-lg"
+                    className="select custom-select custom-select-lg px-3"
                     style={{
+                      padding: '3% 0 3% 0',
                       backgroundColor: '#FCFCFC',
                       border: '0.5px solid rgba(10, 33, 62, 0.15)',
                       borderRadius: '5px',
@@ -410,8 +414,9 @@ function Settings() {
 
                 <div className="two-col-div-item">
                   <select 
-                    className="select custom-select custom-select-lg"
+                    className="select custom-select custom-select-lg px-3"
                     style={{
+                      padding: '3% 0 3% 0',
                       backgroundColor: '#FCFCFC',
                       border: '0.5px solid rgba(10, 33, 62, 0.15)',
                       borderRadius: '5px',
@@ -459,7 +464,7 @@ function Settings() {
                         background: '#FCFCFC',
                         border: '0.5px solid rgba(10, 33, 62, 0.15)',
                         fontSize: '18px',
-                        padding: '3% 4% 3% 4%',
+                        padding: '5% 4% 5% 4%',
                         borderRadius: '5px',
                       }}
                     />
@@ -468,8 +473,9 @@ function Settings() {
 
                   <div className="two-col-div-item">
                     <select 
-                      className="select custom-select custom-select-lg"
+                      className="select custom-select custom-select-lg px-3"
                       style={{
+                        padding: '3% 0 3% 0',
                         backgroundColor: '#FCFCFC',
                         border: '0.5px solid rgba(10, 33, 62, 0.15)',
                         borderRadius: '5px',
@@ -536,16 +542,17 @@ function Settings() {
               <div className="click-appear-div w-100 py-4" 
                 style={{ display: `${apply_wt}`}}
               >
-                <div className="d-flex w-100 px-5 justify-content-between">
+                <div className="two-col-div d-flex w-100 px-5 justify-content-between">
 
-                  <div className="w-50">
+                  <div className="two-col-div-item">
                   <label>
                     Tax Group
                     <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                   </label>
                     <select 
-                      className="select custom-select custom-select-lg"
+                      className="select custom-select custom-select-lg px-3"
                       style={{
+                        padding: '3% 0 3% 0',
                         backgroundColor: '#FCFCFC',
                         border: '0.5px solid rgba(10, 33, 62, 0.15)',
                         borderRadius: '5px',

@@ -234,8 +234,9 @@ function Terms() {
                 <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
               </label>
               <select 
-                className="select custom-select custom-select-lg"
+                className="select custom-select custom-select-lg px-3"
                 style={{
+                  padding: '3% 0 3% 0',
                   backgroundColor: '#FCFCFC',
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
@@ -253,8 +254,9 @@ function Terms() {
                 <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
               </label>
               <select 
-                className="select custom-select custom-select-lg"
+                className="select custom-select custom-select-lg px-3"
                 style={{
+                  padding: '3% 0 3% 0',
                   backgroundColor: '#FCFCFC',
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
@@ -280,8 +282,9 @@ function Terms() {
                 <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
               </label>
               <select 
-                className="select custom-select custom-select-lg"
+                className="select custom-select custom-select-lg px-3"
                 style={{
+                  padding: '3% 0 3% 0',
                   backgroundColor: '#FCFCFC',
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
@@ -299,8 +302,9 @@ function Terms() {
                 <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
               </label>
               <select 
-                className="select custom-select custom-select-lg"
+                className="select custom-select custom-select-lg px-3"
                 style={{
+                  padding: '3% 0 3% 0',
                   backgroundColor: '#FCFCFC',
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
