@@ -486,7 +486,7 @@ function PreviewShareProduct() {
               <h6 
                 className="w-50 font-weight-medium"
               >
-                Shares Reference(Assets)
+                Shares Reference (Assets)
               </h6>
 
               <h6 
@@ -501,7 +501,7 @@ function PreviewShareProduct() {
               <h6 
                 className="w-50 font-weight-medium"
               >
-                Shares Suspense Control(Liabilities)
+                Shares Suspense Control (Liabilities)
               </h6>
 
               <h6 
@@ -517,7 +517,7 @@ function PreviewShareProduct() {
               <h6 
                 className="w-50 font-weight-medium"
               >
-                Share Equity(Equity)
+                Share Equity (Equity)
               </h6>
 
               <h6 
@@ -532,7 +532,7 @@ function PreviewShareProduct() {
               <h6 
                 className="w-50 font-weight-medium"
               >
-                Income From Fee(Income)
+                Income From Fee (Income)
               </h6>
 
               <h6 

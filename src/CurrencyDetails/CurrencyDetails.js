@@ -199,7 +199,7 @@ function CurrencyDetails() {
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
                 }}>
-                <option selected>Open this select menu</option>
+                <option selected>Select Currency</option>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>

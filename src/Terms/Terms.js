@@ -240,10 +240,9 @@ function Terms() {
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
                 }}>
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected value="1">Daily</option>
+                <option value="2">Monthly</option>
+                <option value="3">Annually</option>
               </select>
 
             </div>
@@ -260,10 +259,9 @@ function Terms() {
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
                 }}>
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="1">Daily</option>
+                <option selected value="2">Monthly</option>
+                <option value="3">Annually</option>
               </select>
 
             </div>
@@ -288,10 +286,9 @@ function Terms() {
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
                 }}>
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected value="1">Daily Balance</option>
+                <option value="2">Monthly Balance</option>
+                <option value="3">Annual Balance</option>
               </select>
 
             </div>
@@ -308,10 +305,9 @@ function Terms() {
                   border: '0.5px solid rgba(10, 33, 62, 0.15)',
                   borderRadius: '5px',
                 }}>
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected value="1">365</option>
+                <option value="2">366</option>
+                <option value="3">Can't say</option>
               </select>
 
             </div>
