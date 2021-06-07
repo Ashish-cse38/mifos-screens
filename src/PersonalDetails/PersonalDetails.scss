@@ -27,18 +27,12 @@
 .line {
 	width: 100%;
 }
-.PD-input-section {
-	display: flex;
-	width: 90%;
-}
-.PD-input-field {
-	width: 31%;
-}
 .form-control {
+	height: 60%;
 	background-color: #FCFCFC;
 	border: 0.5px solid rgba(10, 33, 62, 0.15);
 	font-size: 18px;
-	padding: 6% 4% 6% 4%;
+	//padding: 5% 4% 5% 4%;
 	border-radius: 5px;
 }
 .btn-next {
@@ -66,19 +60,11 @@
 	.PD-button {
 		width: 30%;
 	}
-	.PD-input-section {
-		display: block;
-		width: 90%;
-	}
-	.PD-input-field {
-		width: 60%;
-		margin-bottom: 5%;
-	}
 }
 
 @media only screen and (max-width: 500px) {
 	.create_PD {
-		height: 200vh;
+		height: auto;
 		width: 200%;
 	}
 	.PD-checkbox-container {

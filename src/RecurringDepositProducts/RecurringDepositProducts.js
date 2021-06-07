@@ -52,18 +52,17 @@ function RecurringDepositProducts() {
   return (
       <div 
         id="RecurringDepositProducts"
-        className="px-3 py-5 w-100 overflow-auto"
-        style={{height: '100vh', background: '#F3F5F8'}}
+        className="pl-5"
       >
         
         <div 
           className="RDP w-auto"
         >
-          <h4 
+          <h5
             className="py-4"
           >
             Recurring Deposit Products
-          </h4>
+          </h5>
 
           <motion.div 
             className="create h-25 mt-2 py-2 px-3 ml-auto"
@@ -109,10 +108,11 @@ function RecurringDepositProducts() {
         </motion.div>
         
         <motion.div
-          className="w-100 bg-white mx-auto py-1 table-div"
+          className="w-100 bg-white mx-auto pt-1 pb-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
+          style={{borderRadius: '15px'}}
         >
           <div 
             className="my-4 mx-auto"

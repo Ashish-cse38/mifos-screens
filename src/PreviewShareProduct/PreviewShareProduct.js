@@ -18,24 +18,22 @@ function PreviewShareProduct() {
   return (
       <div 
         id="PreviewShareProduct"
-        className="h-100 w-100 px-3 py-5"
-        style={{background: '#F3F5F8'}}
+        className="pl-5"
       >
-        <h4 
-          className="py-4 text-break"
+        <h5 
+          className="py-3 text-break"
         >
           Preview Share Product
-        </h4>
+        </h5>
 
         <motion.div
-          className="h-75 w-100 mx-auto py-1 PSP-rounded"
+          className="h-auto bg-white mx-auto pt-1 pb-4 PSP-rounded"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          style={{background: '#FFFFFF'}}
         >
           <div
-            className="w-100 my-5"
+            className="w-100 mt-4 mb-5"
           >
             <h5
               className="section-heading mb-4 mx-auto font-weight-medium text-break"
@@ -554,16 +552,13 @@ function PreviewShareProduct() {
             <div 
               className="PreviewShareProduct-btns my-5"
             >
-              <motion.button 
+              <Button 
                 className="PSP-button py-3 ml-4 btn-confirm rounded border-0 font-weight-semibold text-break"
-                whileHover={{ scale: 1.1, paddingLeft: '5%'  }}
-                whileTap={{ scale: 0.9 }}
-                transition={{delay: 0}}
                 onClick={goto_rdr}
               >
                 Confirm
                 <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-              </motion.button>
+              </Button>
              
               <Button 
                 className="PSP-button py-3 ml-auto btn-edit font-weight-medium text-break" 

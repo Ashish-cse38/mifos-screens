@@ -1,4 +1,4 @@
-.create_terms {
+.create_IRC {
 	height: 100vh;
 	width: 100%;
 }
@@ -6,22 +6,34 @@
 	height: 35px;
 	width: 35px;
 }
-.terms-button {
+.IRC-button {
 	height: auto;
 	width: 15%;
 	font-size: 20px;
 	font-weight: 600;
 }
-.terms-btn-section {
+.IRC-btn-section {
 	display: flex;
 }
-.terms-checkbox-container {
+.IRC-checkbox-container {
 	overflow: auto;
+}
+.settings-text-small {
+	font-size: 18px;
 }
 .checkbox-div {
 	width: 90%;
 }
+.two-col-div {
+	display: flex;
+	justify-content: space-between;
+}
+.two-col-div-item {
+	display: block;
+	width: 50%;
+}
 .custom-select {
+	//height: 100%;
   background-color: #FCFCFC;
   border: 0.5px solid rgba(10, 33, 62, 0.15);
   font-size: 18px;
@@ -32,13 +44,13 @@
 .icon {
 	color: rgba(10, 33, 62, 0.25);
 }
-.terms-input-section {
+.IRC-input-section {
 	display: flex;
 	justify-content: space-between;
 	width: 90%;
 }
-.terms-input-field {
-	width: 31%;
+.IRC-input-field {
+	width: 48%;
 }
 .form-control {
   background-color: #FCFCFC;
@@ -49,6 +61,10 @@
 }
 .line {
 	width: 100%;
+}
+.line-2 {
+	width: auto;
+	margin-top: 1%;
 }
 .btn-next {
 	order: 1;
@@ -72,28 +88,39 @@
 }
 
 @media only screen and (max-width: 950px) {
-	.terms-button {
+	.IRC-button {
 		width: 30%;
 	}
-	.terms-input-section {
+	.IRC-input-section {
 		display: block;
 		width: 90%;
 	}
-	.terms-input-field {
+	.IRC-input-field {
 		width: 60%;
 		margin-bottom: 5%;
 	}
 }
 
 @media only screen and (max-width: 500px) {
-	.create_terms {
+	.create_IRC {
 		height: auto;
 		width: 200%;
 	}
 	.line {
 		width: 100%;
 	}
-	.terms-checkbox-container {
+	.line-2 {
+		margin: 0%;
+	}
+	.two-col-div {
+		display: block;
+		width: 100%;
+	}
+	.two-col-div-item {
+		width: 80%;
+		margin-bottom: 5%;
+	}
+	.IRC-checkbox-container {
 		&::-webkit-scrollbar {
 			display: none;
 		}
@@ -104,10 +131,10 @@
 	.select {
 		font-size: 15px;
 	}
-	.terms-btn-section {
+	.IRC-btn-section {
 		display: flex;
 	}
-	.terms-button {
+	.IRC-button {
 		width: 30%;
 	}
 }

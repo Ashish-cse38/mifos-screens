@@ -1,4 +1,4 @@
-.create_cd {
+.create_CD {
 	height: 100vh;
 	width: 100%;
 }
@@ -21,8 +21,13 @@
 .checkbox-div {
 	width: 90%;
 }
-.select {
-	font-size: 18px;
+.custom-select {
+  background-color: #FCFCFC;
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  font-size: 18px;
+  //padding: 5% 4% 5% 4%;
+  border-radius: 5px;
+  //padding: 3% 0% 3% 0%;
 }
 .icon {
 	color: rgba(10, 33, 62, 0.25);
@@ -38,7 +43,7 @@
   background-color: #FCFCFC;
   border: 0.5px solid rgba(10, 33, 62, 0.15);
   font-size: 18px;
-  padding: 5% 4% 5% 4%;
+  //padding: 5% 4% 5% 4%;
   border-radius: 5px;
 }
 .line {
@@ -78,8 +83,8 @@
 	}
 }
 @media only screen and (max-width: 500px) {
-	.create_cd {
-		height: 200vh;
+	.create_CD {
+		height: auto;
 		width: 200%;
 	}
 	.line {

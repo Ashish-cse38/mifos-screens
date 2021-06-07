@@ -10,6 +10,9 @@ import PersonalDetails from './PersonalDetails/PersonalDetails';
 import CurrencyDetails from './CurrencyDetails/CurrencyDetails';
 import Terms from './Terms/Terms';
 import Settings from './Settings/Settings';
+import InterestRateChart from './InterestRateChart/InterestRateChart';
+import Charges from './Charges/Charges';
+import Accounting from './Accounting/Accounting';
 
 
 function App() {
@@ -27,6 +30,11 @@ function App() {
 
         <Route path="/settings" component={Settings} />
 
+        <Route path="/interest-rate-chart" component={InterestRateChart} />
+
+        <Route path="/charges" component={Charges} />
+
+        <Route path="/accounting" component={Accounting} />
     </Router>
     </div>;
 }

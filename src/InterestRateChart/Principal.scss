@@ -1,0 +1,53 @@
+.click-appear-div {
+  background: rgba(81, 142, 248, 0.1);
+  border: 1px solid #518EF8;
+  border-radius: 15px;
+}
+.custom-select {
+  background-color: #FCFCFC;
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  font-size: 18px;
+  //padding: 5% 4% 5% 4%;
+  border-radius: 5px;
+  //padding: 3% 0% 3% 0%;
+}
+.form-control {
+  background-color: #FCFCFC;
+  border: 0.5px solid rgba(10, 33, 62, 0.15);
+  font-size: 18px;
+  //padding: 5% 4% 5% 4%;
+  border-radius: 5px;
+}
+.two-col-div {
+	display: flex;
+	justify-content: space-between;
+}
+.two-col-div-item {
+	display: block;
+	width: 50%;
+}
+.icon {
+	color: rgba(10, 33, 62, 0.25);
+}
+
+@media only screen and (max-width: 500px) {
+	.two-col-div {
+		display: block;
+		width: 100%;
+	}
+	.two-col-div-item {
+		width: 80%;
+		margin-bottom: 5%;
+	}
+	.terms-checkbox-container {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+	}
+	.checkbox-div {
+		width: 120%;
+	}
+	.select {
+		font-size: 15px;
+	}
+}

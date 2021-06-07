@@ -1,4 +1,4 @@
-.create_terms {
+.create_accounting {
 	height: 100vh;
 	width: 100%;
 }
@@ -6,17 +6,20 @@
 	height: 35px;
 	width: 35px;
 }
-.terms-button {
+.accounting-button {
 	height: auto;
 	width: 15%;
 	font-size: 20px;
 	font-weight: 600;
 }
-.terms-btn-section {
+.accounting-btn-section {
 	display: flex;
 }
-.terms-checkbox-container {
+.accounting-checkbox-container {
 	overflow: auto;
+}
+.accounting-text-small {
+	font-size: 18px;
 }
 .checkbox-div {
 	width: 90%;
@@ -32,23 +35,25 @@
 .icon {
 	color: rgba(10, 33, 62, 0.25);
 }
-.terms-input-section {
-	display: flex;
-	justify-content: space-between;
-	width: 90%;
-}
-.terms-input-field {
-	width: 31%;
-}
 .form-control {
   background-color: #FCFCFC;
   border: 0.5px solid rgba(10, 33, 62, 0.15);
   font-size: 18px;
   //padding: 5% 4% 5% 4%;
   border-radius: 5px;
+  padding: 3% 0% 3% 0%;
 }
 .line {
 	width: 100%;
+}
+.line-2 {
+	width: auto;
+	margin-top: 1%;
+}
+.click-appear-div {
+  background: rgba(81, 142, 248, 0.1);
+  border: 1px solid #518EF8;
+  border-radius: 15px;
 }
 .btn-next {
 	order: 1;
@@ -72,28 +77,23 @@
 }
 
 @media only screen and (max-width: 950px) {
-	.terms-button {
+	.accounting-button {
 		width: 30%;
-	}
-	.terms-input-section {
-		display: block;
-		width: 90%;
-	}
-	.terms-input-field {
-		width: 60%;
-		margin-bottom: 5%;
 	}
 }
 
 @media only screen and (max-width: 500px) {
-	.create_terms {
-		height: auto;
+	.create_accounting {
+		height: 200vh;
 		width: 200%;
 	}
 	.line {
 		width: 100%;
 	}
-	.terms-checkbox-container {
+	.line-2 {
+		margin: 0%;
+	}
+	.accounting-checkbox-container {
 		&::-webkit-scrollbar {
 			display: none;
 		}
@@ -104,10 +104,10 @@
 	.select {
 		font-size: 15px;
 	}
-	.terms-btn-section {
+	.accounting-btn-section {
 		display: flex;
 	}
-	.terms-button {
+	.accounting-button {
 		width: 30%;
 	}
 }
