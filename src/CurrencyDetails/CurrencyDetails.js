@@ -38,7 +38,6 @@ function CurrencyDetails() {
         id="CurrencyDetails"
         className="pl-5"
       >
-
         
         <div 
           className="create_CD"
@@ -50,7 +49,7 @@ function CurrencyDetails() {
           </h5>
         
           <motion.div
-            className="h-auto bg-white mx-auto pb-4"
+            className="h-auto bg-white mx-auto pb-4 mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -66,74 +65,76 @@ function CurrencyDetails() {
               >
             </div>
 
-            <div className="ml-5 my-2 px-3">
-              <h5>Currency Details</h5>
-            </div>
 
             <form>
-            <div className="row mx-5 py-4"
-            >
-              <div className="col-md-4 my-3">
+              <div className="container" >
+                <div className="my-4">
+                  <h5>Currency Details</h5>
+                </div>
+              <div className="row my-2"
+              >
+                <div className="col-md">
+                <div className="form-group">
                 <label>
                   Currency
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
                 <select 
-                  className="custom-select custom-select-lg h-75"
-                  style={{
-                    //padding: '3% 0 3% 0',
-                    backgroundColor: '#FCFCFC',
-                    border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                    borderRadius: '5px',
-                  }}>
+                  id="currency"
+                  className="custom-select"
+                >
                   <option selected>Select Currency</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
               </div>
 
-              <div className="col-md-4 my-3">
+              <div className="col-md">
+                <div className="form-group">
                 <label>
                   Decimal places
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
                 <input
                   id="decimal-places"
-                  className="form-control px-3 h-75" 
-                  type="search"
+                  className="form-control px-3" 
+                  type="number"
                   onChange={d_placeshandler}
                 />
-
+                </div>
               </div>
 
-              <div
-                className="col-md-4 my-3">
-              <label>
-                Currrency in multiples of
-                <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-              </label>
+              <div className="col-md">
+                <div className="form-group">
+                <label>
+                  Currrency in multiples of
+                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+                </label>
                 <input
-                  className="form-control px-3 h-75" type="search"
+                  className="form-control px-3" type="number"
                 />
-
-              </div>
+                </div>
+                </div>
+              
+            </div>
             </div>
 
             <div 
-                className="line my-5" 
+                className="line" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
               >
             </div>
 
+            <div className="container">
             <div>
               <div 
                 className="CD-btn-section my-5"
               >
                 <Button
                   onClick={goto_terms}
-                  className="CD-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold"
+                  className="CD-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
@@ -141,13 +142,14 @@ function CurrencyDetails() {
               
                 <Button
                   onClick={goto_pd}
-                  className="CD-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                  className="CD-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
                 </Button>
               </div>
 
+            </div>
             </div>
             </form>
           </motion.div>

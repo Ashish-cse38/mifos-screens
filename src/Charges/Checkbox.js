@@ -59,7 +59,7 @@ const Checkboxes = () => {
   
   return (
     <div 
-      className="checkbox-div h-auto mx-auto d-flex my-4"
+      className="charges-checkbox-div h-auto mx-auto d-flex my-4"
     >
       <div style={{width: '14%'}}>
         <div className="d-flex">

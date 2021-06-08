@@ -47,7 +47,7 @@ function PersonalDetails() {
 
           
           <motion.div
-            className="h-auto bg-white mx-auto pb-4"
+            className="h-auto bg-white mx-auto pb-4 mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -65,72 +65,81 @@ function PersonalDetails() {
               >
             </div>
     
-
-
-            <div className="ml-5 px-3 my-2">
-              <h5>Product Details</h5>
-            </div>
-
             <form>
-              <div className="row mx-5 py-4">
-                <div className="col-md-6 my-3">
-                  <label>
-                    Product Name
-                    <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-                  </label>
-                  <input
-                    id="product-name"
-                    className="form-control px-3 h-75"
-                    type="search"
-                    onChange={name_changeHandler}
-                    required
-                  />
+            
+                <div className="container">  
+                  <div className="my-4">
+                    <h5>Product Details</h5>
+                  </div>
+                  <div className="row my-2">
 
-                </div>
-                <div className="col-md-6 my-3">
-                  <label>
-                    Short Name
-                    <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-                  </label>
-                  <input
-                    id="short-name"
-                    className="form-control px-3 h-75" 
-                    type="search"
-                  />
+                    <div className="col-md-6">
+                    <div className="form-group">
+                      <label>
+                        Product Name
+                        <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+                      </label>
+                      <input
+                        id="product-name"
+                        className="form-control px-3"
+                        type="search"
+                        onChange={name_changeHandler}
+                        required
+                      />
+                      </div>
 
-                </div>
-              </div>
-
-              <div className="row mx-5 my-3">
-                <label className="mx-3">
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-group">
+                      <label>
+                        Short Name
+                        <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+                      </label>
+                      <input
+                        id="short-name"
+                        className="form-control px-3" 
+                        type="search"
+                      />
+                    </div>
+                    </div>
+                  </div>
+                
+                
+              <div className="row my-2">
+                <div className="col">
+                <div className="form-group">
+                <label>
                   Description
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
                   <textarea
                     id="description"
-                    rows="2"
-                    className="form-control px-3 mx-3" type="search"
+                    rows="3"
+                    className="form-control px-3" type="search"
                     style={{
                       padding: '2% 2% 2% 2%'
                     }}
                   />
-
+                  </div>
+                  </div>
+              </div>
               </div>
 
                 <div 
-                  className="PD-line my-5" 
+                  className="line" 
                   style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
                 >
 
                 </div>
-
+                <div className="container">
                 <div>
                   <div 
                     className="PD-btn-section my-5"
                   >
                     <Button 
+                      type="button"
                       onClick={goto_currency_details}
-                      className="PD-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold"
+                      className="PD-button py-2 ml-4 btn-next font-weight-semibold"
                     >
                       Next
                       <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
@@ -138,13 +147,14 @@ function PersonalDetails() {
                   
                     <Button 
                       onClick={goto_rdr}
-                      className="PD-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                      className="PD-button py-2 ml-auto btn-prev font-weight-medium" 
                     >
                       <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                       Previous
                     </Button>
                   </div>
 
+                </div>
                 </div>
             </form>
           </motion.div>

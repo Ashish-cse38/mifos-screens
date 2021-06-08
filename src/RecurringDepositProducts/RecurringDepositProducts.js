@@ -64,23 +64,23 @@ function RecurringDepositProducts() {
             Recurring Deposit Products
           </h5>
 
-          <motion.div 
-            className="create h-25 mt-2 py-2 px-3 ml-auto"
-            initial={{ opacity: 0, x: 60 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0 }}
+          <motion.button
+            className="create-rdr h-25 mt-2 py-2 px-3 ml-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
             onClick={goto_pd} >
             <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
             Create Recurring Deposit Products
-          </motion.div>
+          </motion.button>
 
         </div>
 
         <motion.div 
-          className="search input-group input-group-lg mx-auto d-flex"
+          className="crdr-search input-group input-group-lg mx-auto d-flex"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0 }}
         >
           <span 
             className="input-span input-group-append bg-white border-right-0 mb-4 pl-2" 
@@ -108,14 +108,14 @@ function RecurringDepositProducts() {
         </motion.div>
         
         <motion.div
-          className="w-100 bg-white mx-auto pt-1 pb-4"
+          className="w-100 bg-white mx-auto pt-1 pb-4 mb-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.5 }}
           style={{borderRadius: '15px'}}
         >
           <div 
-            className="my-4 mx-auto"
+            className="mx-auto"
             style={{width: '96%'}}
           >
            
@@ -123,7 +123,7 @@ function RecurringDepositProducts() {
             <Table 
               id="myTable"
               borderless 
-              className="RecurringDepositProducts-table h-100 table-sm table-hover table-responsive-sm"
+              className="RecurringDepositProducts-table table-sm table-hover table-responsive-sm"
               style={{background: '#FFFFFF'}}
             >
               <thead style={{color: 'rgba(10, 33, 62, 0.6)', borderBottom: '0.5px solid rgba(10, 33, 62, 0.1)'}}>

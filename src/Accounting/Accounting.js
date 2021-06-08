@@ -14,16 +14,17 @@ import Checkboxes from './Checkbox';
 const Principal = (props) => {
   return (
     <>
-
+    <div className="container">
       <div 
         id={props.id}
-        className="row mx-5 mb-3 d-flex justify-content-between">
-        <div className="col-md-5 my-3">
+        className="row">
+        <div className="col-md-5">
+          <div class="form-group">
           <label>
             <h6>Payment Type</h6>
           </label>
           <select 
-            className="custom-select custom-select-lg h-75 px-3"
+            className="custom-select px-3"
             //value={lck_in}
             style={{
               //padding: '3% 0 3% 0',
@@ -38,13 +39,15 @@ const Principal = (props) => {
             <option value="3">Three</option>
           </select>
         </div>
+        </div>
 
-        <div className="col-md-5 my-3">
-          <label className="">
+        <div className="col-md-5">
+        <div class="form-group">
+          <label>
             <h6>Fund Sources</h6>
           </label>
             <select 
-              className="custom-select custom-select-lg h-75 px-3"
+              className="custom-select px-3"
               //value={lck_in}
               style={{
                 //padding: '3% 0 3% 0',
@@ -58,10 +61,11 @@ const Principal = (props) => {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
-
+            </div>
         </div>
 
-        <div className="col-md-1 w-auto mt-5 mx-auto" style={{color:'#FD5E1A'}}>
+        <div className="col-md-1 w-auto mt-4 mx-auto" style={{color:'#FD5E1A'}}>
+        <div class="form-group">
           {props.array.length >= 1 ?
           <div className="mt-4">
             <FontAwesomeIcon 
@@ -71,7 +75,8 @@ const Principal = (props) => {
           </div> : ''
           }
         </div>
-    
+        </div>
+        </div>
       </div>
       
     </>
@@ -147,7 +152,7 @@ function Accounting() {
           </h5>
         
           <motion.div
-            className="h-auto bg-white mx-auto overflow-auto"
+            className="h-auto bg-white mx-auto pb-4 mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -163,22 +168,25 @@ function Accounting() {
             >
             </div>
 
-            <div className="ml-5 my-3">
+            <form>
+              <div className="container">
+            <div>
               <h5>Accounting</h5>
             </div>
 
-            <div className="d-flex ml-5 py-4">
-              <div className="px-3 py-2 mr-3"
+            <div className="d-flex py-4">
+              <Button className="px-3 py-2 mr-3"
                 onClick={select_accounting}
                 style={{
                   background: 'rgba(81, 142, 248, 0.1)',
                   border: '1px solid #518EF8',
-                  borderRadius: '100px'
+                  borderRadius: '100px',
+                  color: '#518EF8'
                 }}>
                   {icon1}
                   None
-              </div>
-              <div class="px-3 py-2"
+              </Button>
+              <Button class="px-3 py-2"
                 onClick={select_accounting}
               style={{
                 background: 'rgba(81, 142, 248, 0.1)',
@@ -188,27 +196,28 @@ function Accounting() {
               }}>
                 {icon2}
                 Cash
-              </div>
+              </Button>
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Assets</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-3">
+            <div className="row py-4">
+              <div className="col-md-4">
+              <div className="form-group">
                 <label>
                   Saving reference
                   <FontAwesomeIcon className="ml-2" icon={faInfoCircle} style={{color: "rgba(10, 33, 62, 0.25)"}}/>
                 </label>
                 <select 
-                  className="custom-select custom-select custom-select-lg h-75 px-3"
+                  className="custom-select custom-select h-75 px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -220,30 +229,31 @@ function Accounting() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
 
               </div>
 
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Liabilities</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-3">
+            <div className="row py-4">
+              <div className="col-md-4">
+              <div className="form-group">
                 <label>
                   Saving control
                   <FontAwesomeIcon className="ml-2" icon={faInfoCircle} style={{color: "rgba(10, 33, 62, 0.25)"}}/>
                 </label>
                 <select 
-                  className="custom-select custom-select custom-select-lg h-75 px-3"
+                  className="custom-select custom-select h-75 px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -255,17 +265,18 @@ function Accounting() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
 
               </div>
 
-              <div className="col-md-4 my-3">
+              <div className="col-md-4">
+              <div className="form-group">
               <label>
                   Saving transfers in suspense
                   <FontAwesomeIcon className="ml-2" icon={faInfoCircle} style={{color: "rgba(10, 33, 62, 0.25)"}}/>
                 </label>
                 <select 
-                  className="custom-select custom-select custom-select-lg h-75 px-3"
+                  className="custom-select custom-select h-75 px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -277,29 +288,30 @@ function Accounting() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
 
               </div>
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Expenses</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-3">
+            <div className="row py-4">
+              <div className="col-md-4">
+              <div className="form-group">
                 <label>
                   Interest on savings
                   <FontAwesomeIcon className="ml-2" icon={faInfoCircle} style={{color: "rgba(10, 33, 62, 0.25)"}}/>
                 </label>
                 <select 
-                  className="custom-select custom-select custom-select-lg h-75 px-3"
+                  className="custom-select custom-select h-75 px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -311,30 +323,32 @@ function Accounting() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
 
               </div>
 
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Income</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-3">
+            <div className="row py-4">
+              <div className="col-md-4">
+                <div className="form-group">
+
                 <label>
                   Income from fees
                   <FontAwesomeIcon className="ml-2" icon={faInfoCircle} style={{color: "rgba(10, 33, 62, 0.25)"}}/>
                 </label>
                 <select 
-                  className="custom-select custom-select custom-select-lg h-75 px-3"
+                  className="custom-select custom-select h-75 px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -346,17 +360,18 @@ function Accounting() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
 
               </div>
 
-              <div className="col-md-4 my-3">
+              <div className="col-md-4">
+              <div className="form-group">
               <label>
                   Income from penalties
                   <FontAwesomeIcon className="ml-2" icon={faInfoCircle} style={{color: "rgba(10, 33, 62, 0.25)"}}/>
                 </label>
                 <select 
-                  className="custom-select custom-select custom-select-lg h-75 px-3"
+                  className="custom-select custom-select h-75 px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -368,18 +383,18 @@ function Accounting() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
 
               </div>
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="mx-5" style={{fontSize: '20px'}}>
+            <div style={{fontSize: '20px'}}>
 
               <div className="my-2" style={{fontSize: '20px'}}>
 
@@ -393,8 +408,8 @@ function Accounting() {
               </div>
 
               <div class="custom-control custom-switch mb-5">
-                <input onClick={API_div} type="checkbox" class="custom-control-input" id="customSwitch4" />
-                <label class="custom-control-label accounting-text-small" for="customSwitch4">
+                <input onClick={API_div} type="checkbox" class="custom-control-input" id="customSwitch2" />
+                <label class="custom-control-label accounting-text-small" for="customSwitch2">
                   Configure Fund Source for Payment Channels
                 </label>
               </div>
@@ -409,7 +424,9 @@ function Accounting() {
                 
                   {principals}
 
-                  <div className="row mx-5 my-5">
+                  <div className="row mt-4 mb-3">
+                    <div className="col">
+                    <div className="form-group">
                     <Button 
                       className="py-3 mx-3" 
                       onClick={add_principal}
@@ -426,6 +443,8 @@ function Accounting() {
                         }} />
                       Add Another Principal
                     </Button>
+                    </div>
+                    </div>
                   </div>
 
                 </div>
@@ -435,25 +454,26 @@ function Accounting() {
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="mx-5" style={{fontSize: '20px'}}>
+            <div>
               <div class="custom-control custom-switch my-2">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1" />
-                <label class="custom-control-label accounting-text-small" for="customSwitch1">
+                <input type="checkbox" class="custom-control-input" id="customSwitch3" />
+                <label class="custom-control-label accounting-text-small" for="customSwitch3">
                   Map Fees to Income Accounts
                 </label>
               </div>
               <div class="custom-control custom-switch my-2">
-                <input type="checkbox" class="custom-control-input" id="customSwitch1" />
-                <label class="custom-control-label accounting-text-small" for="customSwitch1">
+                <input type="checkbox" class="custom-control-input" id="customSwitch4" />
+                <label class="custom-control-label accounting-text-small" for="customSwitch4">
                   Map Penalties to Specific Income Accounts
                 </label>
               </div>
               
+            </div>
             </div>
 
 
@@ -463,13 +483,13 @@ function Accounting() {
               >
             </div>
 
-            <div>
+            <div className="container">
               <div 
                 className="accounting-btn-section my-5"
               >
                 <Button 
                   onClick={goto_IRC}
-                  className="accounting-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold"
+                  className="accounting-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
@@ -477,7 +497,7 @@ function Accounting() {
               
                 <Button 
                   onClick={goto_charges}
-                  className="accounting-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                  className="accounting-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
@@ -485,6 +505,8 @@ function Accounting() {
               </div>
 
             </div>
+          
+            </form>
           </motion.div>
         </div>
       </div>

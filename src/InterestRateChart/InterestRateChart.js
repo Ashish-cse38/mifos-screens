@@ -84,7 +84,7 @@ function InterestRateChart() {
           </h5>
         
           <motion.div
-            className="h-auto bg-white mx-auto pb-4"
+            className="h-auto bg-white mx-auto pb-4 mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -100,13 +100,17 @@ function InterestRateChart() {
             >
             </div>
 
-            <div className="ml-5 my-4">
+            <form>
+              <div className="container">
+
+            <div className="my-4">
               <h5>Interest Rate Chart</h5>
             </div>
 
-            <div className="row mx-5 py-4"
+            <div className="row py-4"
             >
-              <div className="col-md-6 my-3">
+              <div className="col-md-6">
+              <div className="form-group">
                 <label>
                   Valid From Date
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
@@ -116,10 +120,11 @@ function InterestRateChart() {
                     className="form-control px-3" type="date"
                     onChange={valid_fromHandler}
                 />
-
+              </div>
               </div>
 
-              <div className="col-md-6 my-3">
+              <div className="col-md-6">
+              <div className="form-group">
                 <label>
                   Valid Till Date
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
@@ -128,19 +133,19 @@ function InterestRateChart() {
                     id="short-name"
                     className="form-control px-3" type="date"
                 />
-
+              </div>
               </div>
               
             </div>
 
 
             <div 
-                className="line-2 mb-4 mx-5" 
+                className="line-2 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>        
 
-            <div className="mx-5" style={{fontSize: '20px'}}>
+            <div style={{fontSize: '20px'}}>
 
               <div class="custom-control custom-switch mb-4">
                 <input onClick={Principal_div} type="checkbox" class="custom-control-input" id="customSwitch4" />
@@ -148,7 +153,10 @@ function InterestRateChart() {
               </div>
 
               <div className="apply_pi" style={{display: `${show_elements}`}}>
-                {elements}
+                <form>
+                  {elements}
+                </form>
+                
 
               </div>
 
@@ -173,20 +181,21 @@ function InterestRateChart() {
               </div>
 
             </div>
+            </div>
 
             <div 
-                className="line my-5" 
+                className="line my-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
               >
             </div>
 
-            <div>
+            <div className="container">
               <div 
                 className="IRC-btn-section my-5"
               >
                 <Button 
                   onClick={goto_charges}
-                  className="IRC-button py-3 ml-4 mr-5 btn-next font-weight-semibold"
+                  className="IRC-button py-2 ml-4 btn-next font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
@@ -194,7 +203,7 @@ function InterestRateChart() {
               
                 <Button 
                   onClick={goto_settings}
-                  className="IRC-button py-3 ml-auto btn-prev font-weight-medium" 
+                  className="IRC-button py-2 ml-auto btn-prev font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
@@ -202,6 +211,7 @@ function InterestRateChart() {
               </div>
 
             </div>
+            </form>
           </motion.div>
         </div>
       </div>

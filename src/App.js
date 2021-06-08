@@ -34,7 +34,7 @@ function App() {
 
         <Route path="/charges" component={Charges} />
 
-        <Route path="/accounting" component={Accounting} />
+        <Route path="/accountingTab" component={Accounting} />
     </Router>
     </div>;
 }

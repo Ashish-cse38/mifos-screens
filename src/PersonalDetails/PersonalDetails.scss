@@ -34,25 +34,26 @@
 	font-size: 18px;
 	//padding: 5% 4% 5% 4%;
 	border-radius: 5px;
+	height: 60px;
 }
 .btn-next {
 	order: 1;
 	color: white;
-	background: #1AC29A;
-	border-color: #1AC29A;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
 	&:hover {
-		background: #1AC29A;
-		border-color: #1AC29A;
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
 	}
 }
 .btn-prev {
 	color: rgba(10, 33, 62, 0.6);
-	background: #F3F5F8;
-	border-color: #F3F5F8;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
 	&:hover {
 		color: rgba(10, 33, 62, 0.6);
-		background: #F3F5F8;
-		border-color: #F3F5F8;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
 	}
 }
 
@@ -65,7 +66,7 @@
 @media only screen and (max-width: 500px) {
 	.create_PD {
 		height: auto;
-		width: 200%;
+		width: 100%;
 	}
 	.PD-checkbox-container {
 		&::-webkit-scrollbar {
@@ -76,12 +77,18 @@
 		width: 100%;
 	}
 	.PD-checkbox-div {
-		width: 120%;
+		width: 240%;
 	}
 	.PD-btn-section {
-		display: flex;
+		display: block;
+		margin-left: 10%;
 	}
-	.PD-button {
-		width: 30%;
+	.btn-next {
+		width: 90%;
+		margin-left: 0% !important;
+		margin-bottom: 4vw;
+	}
+	.btn-prev {
+		width: 90%;
 	}
 }

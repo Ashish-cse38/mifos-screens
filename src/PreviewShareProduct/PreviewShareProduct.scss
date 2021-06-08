@@ -35,21 +35,21 @@ $w-90 : 90%;
 	margin-right: 5%;
 	order: 1;
 	color: white;
-	background: #1AC29A;
-	border-color: #1AC29A;
+	background: #1AC29A !important;
+	border-color: #1AC29A !important;
 	&:hover {
-		background: #1AC29A;
-		border-color: #1AC29A;
+		background: #1AC29A !important;
+		border-color: #1AC29A !important;
 	}
 }
 .btn-edit {
 	color: rgba(10, 33, 62, 0.6);
-	background: #F3F5F8;
-	border-color: #F3F5F8;
+	background: #F3F5F8 !important;
+	border-color: #F3F5F8 !important;
 	&:hover {
 		color: rgba(10, 33, 62, 0.6);
-		background: #F3F5F8;
-		border-color: #F3F5F8;
+		background: #F3F5F8 !important;
+		border-color: #F3F5F8 !important;
 	}
 }
 
@@ -76,17 +76,8 @@ $w-90 : 90%;
 		width: 90%;
 		margin-left: 0% !important;
 		margin-bottom: 4vw;
-		&:hover {
-			background: #1AC29A;
-			border-color: #1AC29A;
-		}
 	}
 	.btn-edit {
 		width: 90%;
-		&:focus {
-			color: rgba(10, 33, 62, 0.6);
-			background: #F3F5F8;
-			border-color: #F3F5F8;
-		}
 	}
 }

@@ -82,7 +82,7 @@ function Settings() {
           </h5>
         
           <motion.div
-            className="h-auto bg-white mx-auto pb-4"
+            className="h-auto bg-white mx-auto pb-4 mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -98,59 +98,64 @@ function Settings() {
             >
             </div>
 
-            <div className="ml-5 my-3">
+            <form>
+              <div className="container">
+
+            <div className="my-3">
               <h5>Settings</h5>
             </div>
 
-            <div className="ml-5 my-4" style={{fontSize: '20px'}}>
+            <div className="my-4" style={{fontSize: '20px'}}>
 
-              <div class="custom-control custom-switch my-2">
+              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch1" />
                 <label class="custom-control-label settings-text-small" for="customSwitch1">
                   Is Mandatory Deposit
-                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
+                <FontAwesomeIcon className="icon ml-2" icon={faInfoCircle} />
               </div>
-              <div class="custom-control custom-switch my-2">
+              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch2" />
-                <label class="custom-control-label settings-text-small pr-4" for="customSwitch2">
+                <label class="custom-control-label settings-text-small" for="customSwitch2">
                   Adjust advanced payments toward future installments
-                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
+                <FontAwesomeIcon className="icon ml-2" icon={faInfoCircle} />
               </div>
-              <div class="custom-control custom-switch my-2">
+              <div class="custom-control custom-switch">
                 <input type="checkbox" class="custom-control-input" id="customSwitch3" />
                 <label class="custom-control-label settings-text-small" for="customSwitch3">
                   Allow Withdrawls
-                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
+                <FontAwesomeIcon className="icon ml-2" icon={faInfoCircle} />
               </div>
 
             </div>
 
             <div 
-                className="line-2 mb-4 mx-5" 
+                className="line-2 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Lock-in Period</h5>
             </div>
 
-              <div className="row mx-5 py-4">
-                <div className="col-md-4 my-2">
+              <div className="row py-4">
+                <div className="col-md-4">
+                <div className="form-group">
                   <input
                     id="product-name"
-                    className="form-control h-100 px-3" type="search"
+                    className="form-control px-3" type="search"
                     onChange={lck_inHandler}
                   />
-
+                  </div>
                 </div>
 
-                <div className="col-md-4 my-2">
+                <div className="col-md-4">
+                  <div className="form-group">
                   <select 
-                    className="custom-select custom-select-lg h-100 px-3"
+                    className="custom-select px-3"
                     style={{
                       //padding: '3% 0 3% 0',
                       backgroundColor: '#FCFCFC',
@@ -162,32 +167,34 @@ function Settings() {
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                   </select>
-
+                  </div>
                 </div>
               </div>
 
             <div 
-                className="line-2 mb-4 mx-5" 
+                className="line-2 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Minimum Deposit Term</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-2">
+            <div className="row py-4">
+              <div className="col-md-4">
+              <div className="form-group">
                 <input
                   id="product-name"
-                  className="form-control h-100 px-3" type="search"
+                  className="form-control px-3" type="search"
                 />
-
+                </div>
               </div>
 
-              <div className="col-md-4 my-2">
+              <div className="col-md-4">
+              <div className="form-group">
                 <select 
-                  className="custom-select custom-select-lg px-3"
+                  className="custom-select px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -199,32 +206,34 @@ function Settings() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
               </div>
             </div>
 
             <div 
-                className="line-2 mb-4 mx-5" 
+                className="line-2 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>And thereafter, In Multiples of</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-2">
+            <div className="row py-4">
+              <div className="col-md-4">
+              <div className="form-group">
                 <input
                   id="product-name"
-                  className="form-control h-100 px-3" type="search"
+                  className="form-control px-3" type="search"
                 />
-
+                </div>
               </div>
 
-              <div className="col-md-4 my-2">
+              <div className="col-md-4">
+              <div className="form-group">
                 <select 
-                  className="custom-select custom-select-lg px-3"
+                  className="custom-select px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -236,32 +245,34 @@ function Settings() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
               </div>
             </div>
 
             <div 
-                className="line-2 mb-4 mx-5" 
+                className="line-2 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5">
+            <div>
               <h5>Maximum Deposit Term</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-4 my-2">
+            <div className="row py-4">
+              <div className="col-md-4">
+              <div className="form-group">
                 <input
                   id="product-name"
-                  className="form-control h-100 px-3" type="search"
+                  className="form-control px-3" type="search"
                 />
-
+                </div>
               </div>
 
-              <div className="col-md-4 my-2">
+              <div className="col-md-4">
+              <div className="form-group">
                 <select
-                  className="custom-select custom-select-lg px-3"
+                  className="custom-select px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -273,21 +284,21 @@ function Settings() {
                   <option value="2">Two</option>
                   <option value="3">Three</option>
                 </select>
-
+                </div>
               </div>
             </div>
 
             <div 
-                className="line-2 mb-5 mx-5" 
+                className="line-2 mb-5" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5 mb-4">
+            <div className="mb-4">
               <h5>For Pre-mature Closure</h5>
             </div>
 
-            <div className="mx-5" style={{fontSize: '20px'}}>
+            <div style={{fontSize: '20px'}}>
 
               <div class="custom-control custom-switch mb-4">
                 <input onClick={API_div} type="checkbox" class="custom-control-input" id="customSwitch4" />
@@ -301,10 +312,11 @@ function Settings() {
                 >
                   <div className="container">
                     <div className="row py-4">
-                      <div className="col-md-6 my-2">
+                      <div className="col-md-6">
+                      <div className="form-group">
                         <input
                           id="product-name"
-                          className="form-control px-3 h-100" type="search"
+                          className="form-control px-3" type="search"
                           style={{
                             background: '#FCFCFC',
                             border: '0.5px solid rgba(10, 33, 62, 0.15)',
@@ -313,12 +325,13 @@ function Settings() {
                             borderRadius: '5px',
                           }}
                         />
-
+                        </div>
                       </div>
 
-                      <div className="col-md-6 my-2">
+                      <div className="col-md-6">
+                      <div className="form-group">
                         <select 
-                          className="custom-select custom-select-lg h-100 px-3"
+                          className="custom-select px-3"
                           //value={lck_in}
                           style={{
                             //padding: '3% 0 3% 0',
@@ -332,7 +345,7 @@ function Settings() {
                           <option value="2">Two</option>
                           <option value="3">Three</option>
                         </select>
-
+                        </div>
                       </div>
                       
                     </div>
@@ -346,32 +359,33 @@ function Settings() {
             </div>
 
             <div 
-                className="line-2 mt-4 mb-4 mx-5" 
+                className="line-2 mt-4 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="ml-5  ">
+            <div>
               <h5>Balance Required For Interest Calculation</h5>
             </div>
 
-            <div className="row mx-5 py-4">
-              <div className="col-md-6 my-2">
+            <div className="row  py-4">
+              <div className="col-md-6">
+              <div className="form-group">
                 <input
                   id="product-name"
-                  className="form-control h-100 px-3" type="search"
+                  className="form-control px-3" type="search"
                 />
-
+                </div>
               </div>
             </div>
 
             <div 
-                className="line-2 mb-4 mx-5" 
+                className="line-2 mb-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
             >
             </div>
 
-            <div className="mx-5" style={{fontSize: '20px'}}>
+            <div>
 
               <div class="custom-control custom-switch mb-4">
                 <input onClick={WT_div} type="checkbox" class="custom-control-input" id="customSwitch5" />
@@ -384,13 +398,14 @@ function Settings() {
                   <div className="container">
                     <div className="row py-4">
                       
-                      <div className="col-md-6 my-2">
+                      <div className="col-md-6">
+                      <div className="form-group">
                         <label>
                           Tax Group
                           <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                         </label>
                         <select 
-                          className="custom-select custom-select-lg h-75 px-3"
+                          className="custom-select px-3"
                           //value={lck_in}
                           style={{
                             //padding: '3% 0 3% 0',
@@ -404,28 +419,29 @@ function Settings() {
                           <option value="2">Two</option>
                           <option value="3">Three</option>
                         </select>
-
+                        </div>
                       </div>
                     </div>
                   </div>  
                 </div>
               </div>
             </div>
+            </div>
 
 
             <div 
-                className="line my-5" 
+                className="line my-4" 
                 style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
               >
             </div>
 
-            <div>
+            <div className="container">
               <div 
                 className="settings-btn-section my-5"
               >
                 <Button 
                   onClick={goto_IRC}
-                  className="settings-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold"
+                  className="settings-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
@@ -433,7 +449,7 @@ function Settings() {
               
                 <Button 
                   onClick={goto_terms}
-                  className="settings-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                  className="settings-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
@@ -441,6 +457,7 @@ function Settings() {
               </div>
 
             </div>
+            </form>
           </motion.div>
         </div>
       </div>

@@ -27,7 +27,7 @@ function PreviewShareProduct() {
         </h5>
 
         <motion.div
-          className="h-auto bg-white mx-auto pt-1 pb-4 PSP-rounded"
+          className="h-auto bg-white mx-auto pt-1 mb-4 pb-4 PSP-rounded"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -553,7 +553,7 @@ function PreviewShareProduct() {
               className="PreviewShareProduct-btns my-5"
             >
               <Button 
-                className="PSP-button py-3 ml-4 btn-confirm rounded border-0 font-weight-semibold text-break"
+                className="PSP-button py-2 ml-4 btn-confirm rounded border-0 font-weight-semibold text-break"
                 onClick={goto_rdr}
               >
                 Confirm
@@ -561,7 +561,7 @@ function PreviewShareProduct() {
               </Button>
              
               <Button 
-                className="PSP-button py-3 ml-auto btn-edit font-weight-medium text-break" 
+                className="PSP-button py-2 ml-auto btn-edit font-weight-medium text-break" 
               >
                 <FontAwesomeIcon className="mr-3" icon={faEdit} />
                 Edit

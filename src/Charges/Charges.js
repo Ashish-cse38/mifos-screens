@@ -22,11 +22,11 @@ function Charges() {
   function goto_accounting() {
     if (charges == '') {
       localStorage.setItem('charges-error', 'true');
-      history.push('/accounting');
+      history.push('/accountingTab');
     }
     else{
       localStorage.removeItem('charges-error');
-      history.push('/accounting');
+      history.push('/accountingTab');
     }
   }
 
@@ -44,42 +44,49 @@ function Charges() {
   function chargesHandler(e) {
     setCharges(e.target.value);
     add_tags(e.target.value);
-    e.target.value = 'Select Charges';
+    console.log(typeof(e.target.value));
   }
 
   const charge_types = ['First', 'Second', 'Third', 'Other'];
 
-  const [tags, setTags] = useState([
-    {id: 1, Name: 'A Charge Title'},
-    {id: 2, Name: 'B Charge Title'},
-    {id: 3, Name: 'C Charge Title'},
-    {id: 4, Name: 'D Charge Title'},
-    {id: 5, Name: 'E Charge Title'},
-    {id: 6, Name: 'F Charge Title'},
-    {id: 7, Name: 'G Charge Title'},
-    {id: 8, Name: 'H Charge Title'}
-  ]);
+  const [tags_set, setTags_set] = useState(new Set([
+    'A Charge Title',
+    'B Charge Title',
+    'C Charge Title',
+    'D Charge Title',
+    'E Charge Title',
+    'F Charge Title',
+    'G Charge Title',
+    'H Charge Title'
+  ]));
 
   const [count, setCount] = useState(9);
 
   function add_tags(val) {
-    setTags([...tags, {id: count, Name: val}]);
-    setCount(count+1);
+    setTags_set(new Set(tags_set).add(val));
   }
 
-  function delete_tags(id) {
-    setTags(tags.filter(item => item.id != id));
+  
+
+  function delete_tags(val) {
+    const filter = [];
+    tags_set.forEach((el) => {
+      if (el != val){
+        filter.push(el);
+      }
+    })
+    setTags_set(new Set(filter));
   }
 
   const items = [{Name: 'A Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021',Amount: '$745.65'},
   {Name: 'AY Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021',Amount: '$745.65'},
   {Name: 'AYY Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021',Amount: '$745.65'},
-  {Name: 'B Loan Product Name', Type: 'B-Pro', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
-  {Name: 'C Loan Product Name', Type: 'C-Pro', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
-  {Name: 'D Loan Product Name', Type: 'D-Pro', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
-  {Name: 'E Loan Product Name', Type: 'E-Pro', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
-  {Name: 'F Loan Product Name', Type: 'F-Pro', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
-  {Name: 'G Loan Product Name', Type: 'G-Pro', CollectedOn: 'March 25, 2021', Amount: '$745.65'}];
+  {Name: 'B Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
+  {Name: 'C Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
+  {Name: 'D Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
+  {Name: 'E Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
+  {Name: 'F Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021', Amount: '$745.65'},
+  {Name: 'G Loan Product Name', Type: 'Cash', CollectedOn: 'March 25, 2021', Amount: '$745.65'}];
 
   const filters = [];
 
@@ -96,7 +103,6 @@ return (
         className="pl-5"
       >
 
-        
         <div 
           className="create_charges"
         >
@@ -125,17 +131,18 @@ return (
               >
             </div>
 
-            <div className="ml-5 my-4">
-              <h5>Charges</h5>
-            </div>
-
             <form>
-            <div className="charges-input-section mx-5 my-4 px-5 py-4 "
+            <div className="container">
+              <div className="my-4">
+                <h5>Charges</h5>
+              </div>
+            <div className="charges-input-section my-4 py-4 "
             >
               <div className="col-md-6">
+              <div className="form-group">
                 <select 
                   onChange={chargesHandler}
-                  className="custom-select custom-select-lg px-3"
+                  className="custom-select px-3"
                   style={{
                     padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -148,18 +155,18 @@ return (
                       value={each}>{each}</option>
                   ))}
                 </select>
-
+                </div>
               </div>
 
               <div 
-                className="mt-5 mb-4 px-2">
+                className="mt-5 mb-4 px-3">
                 <h6>Added Charges</h6>
               </div>
 
-              <div className="Charge-tags d-flex pb-2 overflow-auto">
-                {tags.map((entry) => (
+              <div className="Charge-tags d-flex pb-2 px-3 overflow-auto">
+                {[...tags_set].map((entry) => (
+                  <>
                   <div
-                    id={entry.id}
                     className="pt-2 px-2 d-flex mr-3"
                     style={{
                       background: 'rgba(81, 142, 248, 0.1)',
@@ -168,21 +175,24 @@ return (
                       color: '#518EF8'
                     }}
                   >
-                  <p className="mr-2"
+                  <p className="mx-2 mt-2"
                     style={{
                       whiteSpace: 'nowrap',
-                      textOverflow: 'ellipsis',
                     }}>
-                    {entry.Name}
+                    {entry}
                   </p>
+                  <Button
+                    className="btn-charges ml-auto border-0"
+                  >
                   <FontAwesomeIcon 
-                    onClick={() => {delete_tags(entry.id)}}
-                    className="mt-1 mr-2"
+                    onClick={() => {delete_tags(entry)}}
+                    className="mr-2"
                     icon={faTimesCircle}
-                    style={{
-                      color: '#FD5E1A'
-                  }} />
+                    style={{color: '#FD5E1A', fontSize: '22px'}} 
+                    />
+                  </Button>
                 </div>
+                </>
                 ))}
 
               </div>
@@ -196,13 +206,11 @@ return (
             </div>
 
             <div 
-              className="my-4 mx-5"
+              className="my-4"
             >
-            
-
               <Table 
                 id="myTable"
-                borderless 
+                borderless
                 className="w-100 mx-auto table-sm table-hover table-responsive-sm"
                 style={{background: '#FFFFFF'}}
               >
@@ -290,6 +298,7 @@ return (
                 </tbody>
               </Table>
             </div>
+            </div>
 
             <div 
                 className="line my-5" 
@@ -297,13 +306,13 @@ return (
               >
             </div>
 
-            <div>
+            <div className="container">
               <div 
                 className="charges-btn-section my-5"
               >
                 <Button 
                   onClick={goto_accounting}
-                  className="charges-button py-3 ml-4 mr-5 btn-next border-0 rounded font-weight-semibold"
+                  className="charges-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
@@ -311,13 +320,14 @@ return (
               
                 <Button 
                   onClick={goto_IRC}
-                  className="charges-button py-3 ml-auto btn-prev border-0 rounded font-weight-medium"
+                  className="charges-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium"
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
                 </Button>
               </div>
 
+            
             </div>
             </form>
           </motion.div>
