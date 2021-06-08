@@ -150,7 +150,7 @@ function Settings() {
 
                 <div className="col-md-4 my-2">
                   <select 
-                    className="custom-select custom-select custom-select-lg px-3"
+                    className="custom-select custom-select-lg h-100 px-3"
                     style={{
                       //padding: '3% 0 3% 0',
                       backgroundColor: '#FCFCFC',
@@ -187,7 +187,7 @@ function Settings() {
 
               <div className="col-md-4 my-2">
                 <select 
-                  className="custom-select custom-select custom-select-lg px-3"
+                  className="custom-select custom-select-lg px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -224,7 +224,7 @@ function Settings() {
 
               <div className="col-md-4 my-2">
                 <select 
-                  className="custom-select custom-select custom-select-lg px-3"
+                  className="custom-select custom-select-lg px-3"
                   style={{
                     //padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
@@ -299,7 +299,7 @@ function Settings() {
                   className="click-appear-div py-4"  
                   style={{ display: `${apply_pi}` }}
                 >
-                  <div className="container w-100">
+                  <div className="container">
                     <div className="row py-4">
                       <div className="col-md-6 my-2">
                         <input

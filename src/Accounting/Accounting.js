@@ -63,9 +63,11 @@ const Principal = (props) => {
 
         <div className="col-md-1 w-auto mt-5 mx-auto" style={{color:'#FD5E1A'}}>
           {props.array.length >= 1 ?
-          <div className="mt-4"
-            onClick={() => {document.getElementById(props.id).remove();}}>
-            <FontAwesomeIcon icon={faTimesCircle}/>
+          <div className="mt-4">
+            <FontAwesomeIcon 
+              onClick={() => {document.getElementById(props.id).remove();}}
+              icon={faTimesCircle} 
+              style={{color: '#FD5E1A', fontSize: '22px'}}/>
           </div> : ''
           }
         </div>

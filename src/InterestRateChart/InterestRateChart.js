@@ -44,7 +44,7 @@ function InterestRateChart() {
 
   const [x, setX] = React.useState(0);
 
-  function API_div() {
+  function Principal_div() {
     if (x == 0){
       setX(x+1);
       setShow_elements('block');
@@ -60,13 +60,11 @@ function InterestRateChart() {
 
   function add_principal() { 
     setElements([...elements, <Principal id={uuidv4().toString()} array={elements}/>]);
-    console.log(x);
   }
 
   useEffect(
     () => {
     setElements([...elements, <Principal id={uuidv4().toString()} array={elements}/>]); 
-    console.log(elements);
   },[])
 
   
@@ -145,7 +143,7 @@ function InterestRateChart() {
             <div className="mx-5" style={{fontSize: '20px'}}>
 
               <div class="custom-control custom-switch mb-4">
-                <input onClick={API_div} type="checkbox" class="custom-control-input" id="customSwitch4" />
+                <input onClick={Principal_div} type="checkbox" class="custom-control-input" id="customSwitch4" />
                 <label class="custom-control-label settings-text-small" for="customSwitch4">Is primary grouping by Amount</label>
               </div>
 

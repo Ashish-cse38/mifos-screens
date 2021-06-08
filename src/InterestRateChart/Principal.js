@@ -36,10 +36,10 @@ function Principal(props) {
                     <FontAwesomeIcon 
                       className="icon" 
                       icon={faTimesCircle}
-                      style={{color: '#FD5E1A', fontSize: '20px'}} />
+                      style={{color: '#FD5E1A', fontSize: '22px'}} />
                   </Button> : ''
                 }
-              </div>
+          </div>
       
             <div className="row mx-5 py-2">
               <div className="col-md-6 my-1">
