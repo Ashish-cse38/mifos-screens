@@ -145,7 +145,6 @@ return (
                   onChange={chargesHandler}
                   className="custom-select px-3"
                   style={{
-                    padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
                     border: '0.5px solid rgba(10, 33, 62, 0.15)',
                     borderRadius: '5px',

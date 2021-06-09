@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
+import '../App.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import './InterestRateChart.scss';
 import ReactDOM from 'react-dom';

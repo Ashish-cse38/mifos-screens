@@ -65,7 +65,7 @@ function RecurringDepositProducts() {
           </h5>
 
           <motion.button
-            className="create-rdr h-25 mt-2 py-2 px-3 ml-auto"
+            className="create-rdr mt-2 py-2 px-3 ml-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8 }}
@@ -77,7 +77,7 @@ function RecurringDepositProducts() {
         </div>
 
         <motion.div 
-          className="input-group input-group-lg mx-auto d-flex"
+          className="crdr-search mx-auto d-flex"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0 }}
