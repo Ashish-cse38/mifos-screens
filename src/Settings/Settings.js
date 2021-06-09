@@ -92,11 +92,7 @@ function Settings() {
             <Checkboxes />
             </div>
 
-            <div 
-                className="line mt-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <form>
               <div className="container">
@@ -131,12 +127,7 @@ function Settings() {
 
             </div>
 
-            <div 
-                className="line-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
-
+           <hr/>
             <div>
               <h5>Lock-in Period</h5>
             </div>
@@ -171,11 +162,7 @@ function Settings() {
                 </div>
               </div>
 
-            <div 
-                className="line-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>Minimum Deposit Term</h5>
@@ -210,11 +197,7 @@ function Settings() {
               </div>
             </div>
 
-            <div 
-                className="line-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>And thereafter, In Multiples of</h5>
@@ -249,11 +232,7 @@ function Settings() {
               </div>
             </div>
 
-            <div 
-                className="line-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>Maximum Deposit Term</h5>
@@ -288,11 +267,7 @@ function Settings() {
               </div>
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+           <hr/>
 
             <div className="mb-4">
               <h5>For Pre-mature Closure</h5>
@@ -358,11 +333,7 @@ function Settings() {
 
             </div>
 
-            <div 
-                className="line-2 mt-4 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>Balance Required For Interest Calculation</h5>
@@ -379,11 +350,7 @@ function Settings() {
               </div>
             </div>
 
-            <div 
-                className="line-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
 
@@ -429,30 +396,24 @@ function Settings() {
             </div>
 
 
-            <div 
-                className="line my-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
-
+            <hr/>
             <div className="container">
               <div 
-                className="settings-btn-section my-5"
+                className="settings-btn-section my-5 w-100"
               >
                 <Button 
-                  onClick={goto_IRC}
-                  className="settings-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
-                >
-                  Next
-                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-                </Button>
-              
-                <Button 
                   onClick={goto_terms}
-                  className="settings-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                  className="settings-button py-2 btn-prev border-0 rounded font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
+                </Button>
+                <Button 
+                  onClick={goto_IRC}
+                  className="settings-button py-2 btn-next border-0 rounded font-weight-semibold"
+                >
+                  Next
+                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </Button>
               </div>
 

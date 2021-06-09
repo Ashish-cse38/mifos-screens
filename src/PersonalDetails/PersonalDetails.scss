@@ -14,6 +14,7 @@
 }
 .PD-btn-section {
 	display: flex;
+	justify-content: flex-end;
 }
 .PD-checkbox-container {
 	overflow: auto;
@@ -37,8 +38,7 @@
 	height: 60px;
 }
 .btn-next {
-	order: 1;
-	color: white;
+	color: white !important;
 	background: #1AC29A !important;
 	border-color: #1AC29A !important;
 	&:hover {
@@ -47,11 +47,12 @@
 	}
 }
 .btn-prev {
-	color: rgba(10, 33, 62, 0.6);
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
 	background: #F3F5F8 !important;
 	border-color: #F3F5F8 !important;
 	&:hover {
-		color: rgba(10, 33, 62, 0.6);
+		color: rgba(10, 33, 62, 0.6) !important;
 		background: #F3F5F8 !important;
 		border-color: #F3F5F8 !important;
 	}
@@ -81,14 +82,12 @@
 	}
 	.PD-btn-section {
 		display: block;
-		margin-left: 10%;
 	}
 	.btn-next {
-		width: 90%;
-		margin-left: 0% !important;
-		margin-bottom: 4vw;
+		width: 100%;
 	}
 	.btn-prev {
-		width: 90%;
+		width: 100%;
+		margin-bottom: 4vw;
 	}
 }

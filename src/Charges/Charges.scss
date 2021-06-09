@@ -14,6 +14,7 @@
 }
 .charges-btn-section {
 	display: flex;
+	justify-content: flex-end;
 }
 .charges-checkbox-container {
 	overflow: auto;
@@ -54,22 +55,8 @@
     display: none;
   }
 }
-.btn-charges {
-	background: none;
-	outline: 0 !important;
-	border: 0 !important;
-	&:hover {
-		background: none;
-	}
-	&:focus {
-		background: none !important;
-		outline: 0 !important;
-  	box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
-	}
-}
 .btn-next {
-	order: 1;
-	color: white;
+	color: white !important;
 	background: #1AC29A !important;
 	border-color: #1AC29A !important;
 	&:hover {
@@ -78,11 +65,12 @@
 	}
 }
 .btn-prev {
-	color: rgba(10, 33, 62, 0.6);
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
 	background: #F3F5F8 !important;
 	border-color: #F3F5F8 !important;
 	&:hover {
-		color: rgba(10, 33, 62, 0.6);
+		color: rgba(10, 33, 62, 0.6) !important;
 		background: #F3F5F8 !important;
 		border-color: #F3F5F8 !important;
 	}
@@ -118,14 +106,12 @@
 	}
 	.charges-btn-section {
 		display: block;
-		margin-left: 10%;
 	}
 	.btn-next {
-		width: 90%;
-		margin-left: 0% !important;
-		margin-bottom: 4vw;
+		width: 100%;
 	}
 	.btn-prev {
-		width: 90%;
+		width: 100%;
+		margin-bottom: 4vw;
 	}
 }

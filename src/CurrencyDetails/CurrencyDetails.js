@@ -59,11 +59,7 @@ function CurrencyDetails() {
               <Checkboxes />
             </div>
 
-            <div 
-                className="line mt-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
 
             <form>
@@ -121,11 +117,7 @@ function CurrencyDetails() {
             </div>
             </div>
 
-            <div 
-                className="line" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <div className="container">
             <div>
@@ -133,19 +125,18 @@ function CurrencyDetails() {
                 className="CD-btn-section my-5"
               >
                 <Button
-                  onClick={goto_terms}
-                  className="CD-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
-                >
-                  Next
-                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-                </Button>
-              
-                <Button
                   onClick={goto_pd}
-                  className="CD-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                  className="CD-button py-2 btn-prev border-0 rounded font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
+                </Button>
+                <Button
+                  onClick={goto_terms}
+                  className="CD-button py-2 btn-next border-0 rounded font-weight-semibold"
+                >
+                  Next
+                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </Button>
               </div>
 

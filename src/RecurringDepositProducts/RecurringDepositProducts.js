@@ -77,7 +77,7 @@ function RecurringDepositProducts() {
         </div>
 
         <motion.div 
-          className="crdr-search input-group input-group-lg mx-auto d-flex"
+          className="input-group input-group-lg mx-auto d-flex"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0 }}

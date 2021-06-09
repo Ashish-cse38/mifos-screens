@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
+import '../App.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 import './PreviewShareProduct.scss';
 import { useHistory } from 'react-router-dom';
@@ -27,22 +28,23 @@ function PreviewShareProduct() {
         </h5>
 
         <motion.div
-          className="h-auto bg-white mx-auto pt-1 mb-4 pb-4 PSP-rounded"
+          className="h-auto bg-white  pt-1 mb-4 pb-4 PSP-rounded"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
         >
+          <div className="container">
           <div
             className="w-100 mt-4 mb-5"
           >
             <h5
-              className="section-heading mb-4 mx-auto font-weight-medium text-break"
+              className="section-heading mb-4  font-weight-medium text-break"
             >
               Details
             </h5>
 
             <div
-              className="greydiv mx-auto py-3 d-flex rounded-right"
+              className="greydiv py-3 d-flex rounded-right"
               style={{}}
             >
               <h6
@@ -60,7 +62,7 @@ function PreviewShareProduct() {
             </div>
 
             <div
-              className="whitediv mx-auto py-3 d-flex"
+              className="whitediv  py-3 d-flex"
             >
               <h6
                 className="w-50 font-weight-medium"
@@ -75,24 +77,20 @@ function PreviewShareProduct() {
               </h6>
             </div>
 
-            <div 
-              className="mt-3 mx-auto"
-              style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width: '90%'}}
-            >
-            </div>
+            <hr/>
           </div>
 
           <div 
             className="w-100 my-5"
           >
             <h5 
-              className="section-heading mb-4 mx-auto font-weight-medium text-break"
+              className="section-heading mb-4  font-weight-medium text-break"
             >
               Items
             </h5>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
+              className="greydiv  py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -109,7 +107,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex"
+              className="whitediv  py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -126,7 +124,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
+              className="greydiv  py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -144,7 +142,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex"
+              className="whitediv  py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -160,7 +158,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
+              className="greydiv  py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -178,7 +176,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex"
+              className="whitediv  py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -194,7 +192,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
+              className="greydiv  py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -210,11 +208,7 @@ function PreviewShareProduct() {
               </h6>
             </div>
 
-            <div 
-              className="mt-4 mx-auto" 
-              style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width: '90%'}}
-            >
-            </div>
+            <hr/>
 
           </div> 
 
@@ -222,13 +216,13 @@ function PreviewShareProduct() {
             className="w-100 my-5"
           >
             <h5 
-              className="section-heading mb-4 mx-auto font-weight-medium text-break"
+              className="section-heading mb-4  font-weight-medium text-break"
             >
               Settings
             </h5>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
+              className="greydiv  py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -245,7 +239,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex"
+              className="whitediv  py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -261,7 +255,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right d-flex"
+              className="greydiv  py-3 d-flex rounded-right d-flex"
               style={{background: '#F3F5F8'}}
             >
               <h6 
@@ -279,7 +273,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex"
+              className="whitediv  py-3 d-flex"
             >
               <h6 
                 className="w-50 font-weight-medium"
@@ -295,28 +289,28 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="mt-4 mx-auto" 
+              className="mt-4 " 
               style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width:'90%'}}
             >           
             </div>
           </div> 
 
           <div 
-            className="mx-auto my-5"
+            className=" my-5"
             style={{width: '100%'}}
           >
             <h5 
-              className="section-heading mb-4 mx-auto font-weight-medium overflow-x-auto"
+              className="section-heading mb-4  font-weight-medium overflow-x-auto"
             >
               Market Price
             </h5>
 
-            <div className="mx-auto"
-              style={{width: '90%', background: '#F3F5F8'}}
+            <div className=""
+              style={{background: '#F3F5F8'}}
             >
               <Table 
                 borderless 
-                className="PreviewShareProduct-table mx-auto h-100 table-sm rounded table-responsive-sm"
+                className="PreviewShareProduct-table  h-100 table-sm rounded table-responsive-sm"
                 style={{}}
                 >
                 <thead style={{color: 'rgba(10, 33, 62, 0.6)'}}>
@@ -363,30 +357,26 @@ function PreviewShareProduct() {
 
             </div>
 
-            <div 
-              className="mt-3 mx-auto" 
-              style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width: '90%'}}
-            >
-            </div>
+            <hr/>
 
           </div>
 
           <div 
-            className="mx-auto my-5"
+            className=" my-5"
             style={{width: '100%'}}
           >
             <h5 
-              className="section-heading mb-4 mx-auto font-weight-medium text-break"
+              className="section-heading mb-4  font-weight-medium text-break"
             >
               Charges
             </h5>
 
-            <div className="mx-auto"
-              style={{width: '90%', background: '#F3F5F8'}}
+            <div className=""
+              style={{background: '#F3F5F8'}}
             >
               <Table 
                 borderless 
-                className="PreviewShareProduct-table mx-auto h-100 table-sm rounded table-responsive-sm"
+                className="PreviewShareProduct-table  h-100 table-sm rounded table-responsive-sm"
                 style={{}}
               >
                 <thead style={{color: 'rgba(10, 33, 62, 0.6)'}}>
@@ -462,24 +452,20 @@ function PreviewShareProduct() {
 
             </div>
 
-            <div 
-              className="mt-3 mx-auto" 
-              style={{border: '0.5px solid rgba(10, 33, 62, 0.1)', width: '90%'}}
-            >
-            </div>
+            <hr/>
           </div>
 
           <div 
             className="w-100 my-5"
           >
             <h5 
-              className="section-heading mb-4 mx-auto font-weight-medium text-break"
+              className="section-heading mb-4  font-weight-medium text-break"
             >
               Accounting
             </h5>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right"
+              className="greydiv  py-3 d-flex rounded-right"
               style={{background: '#F3F5F8'}}>
               <h6 
                 className="w-50 font-weight-medium"
@@ -495,7 +481,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex">
+              className="whitediv  py-3 d-flex">
               <h6 
                 className="w-50 font-weight-medium"
               >
@@ -510,7 +496,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="greydiv mx-auto py-3 d-flex rounded-right"
+              className="greydiv  py-3 d-flex rounded-right"
               style={{background: '#F3F5F8'}}>
               <h6 
                 className="w-50 font-weight-medium"
@@ -526,7 +512,7 @@ function PreviewShareProduct() {
             </div>
 
             <div 
-              className="whitediv mx-auto py-3 d-flex">
+              className="whitediv  py-3 d-flex">
               <h6 
                 className="w-50 font-weight-medium"
               >
@@ -539,33 +525,30 @@ function PreviewShareProduct() {
                 False
               </h6>
             </div>
-
-            <div 
-              className="mt-3 mx-auto" 
-              style={{width: '90%', border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
             </div>
+            
           </div> 
+          <hr/>
 
-          <div 
+          <div className="container"
           >
             <div 
-              className="PreviewShareProduct-btns my-5"
+              className="PreviewShareProduct-btns my-5 w-100"
             >
               <Button 
-                className="PSP-button py-2 ml-4 btn-confirm rounded border-0 font-weight-semibold text-break"
+                className="PSP-button py-2 btn-edit font-weight-medium text-break" 
+              >
+                <FontAwesomeIcon className="mr-3" icon={faEdit} />
+                Edit
+              </Button>
+              <Button 
+                className="PSP-button py-2 btn-confirm rounded border-0 font-weight-semibold text-break"
                 onClick={goto_rdr}
               >
                 Confirm
                 <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
               </Button>
              
-              <Button 
-                className="PSP-button py-2 ml-auto btn-edit font-weight-medium text-break" 
-              >
-                <FontAwesomeIcon className="mr-3" icon={faEdit} />
-                Edit
-              </Button>
             </div>
           </div>  
         </motion.div>

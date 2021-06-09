@@ -94,11 +94,7 @@ function InterestRateChart() {
               <Checkboxes />
             </div>
 
-            <div 
-                className="line mt-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <form>
               <div className="container">
@@ -139,11 +135,7 @@ function InterestRateChart() {
             </div>
 
 
-            <div 
-                className="line-2 mb-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>        
+            <hr/>     
 
             <div style={{fontSize: '20px'}}>
 
@@ -183,31 +175,27 @@ function InterestRateChart() {
             </div>
             </div>
 
-            <div 
-                className="line my-4" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <div className="container">
               <div 
-                className="IRC-btn-section my-5"
+                className="IRC-btn-section my-5 w-100"
               >
                 <Button 
+                  onClick={goto_settings}
+                  className="IRC-button py-2 btn-prev font-weight-medium" 
+                >
+                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
+                  Previous
+                </Button>
+                <Button 
                   onClick={goto_charges}
-                  className="IRC-button py-2 ml-4 btn-next font-weight-semibold"
+                  className="IRC-button py-2 btn-next font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </Button>
               
-                <Button 
-                  onClick={goto_settings}
-                  className="IRC-button py-2 ml-auto btn-prev font-weight-medium" 
-                >
-                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
-                  Previous
-                </Button>
               </div>
 
             </div>

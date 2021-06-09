@@ -6,23 +6,19 @@ $w-90 : 90%;
 		width: $w-90;
 	}
 	.greydiv {
-		width: $w-90;
 		background: #F3F5F8;
 		padding: 0 2% 0 2%;
 		overflow-wrap: break-word;
 	}
 	.whitediv {
-		width: $w-90;
 		padding: 0 2% 0 2%;
 		overflow-wrap: break-word;
 		background: #FBFBFB;
 	}
-	.PreviewShareProduct-table {
-		width: 96%;
-	}
 }
 .PreviewShareProduct-btns {
 	display: flex;
+	justify-content: flex-end;
 }
 .PSP-button {
 	height: auto;
@@ -32,9 +28,7 @@ $w-90 : 90%;
 	font-weight: 600;
 }
 .btn-confirm {
-	margin-right: 5%;
-	order: 1;
-	color: white;
+	color: white !important;
 	background: #1AC29A !important;
 	border-color: #1AC29A !important;
 	&:hover {
@@ -43,11 +37,12 @@ $w-90 : 90%;
 	}
 }
 .btn-edit {
-	color: rgba(10, 33, 62, 0.6);
+	margin-right: 20px;
+	color: rgba(10, 33, 62, 0.6) !important;
 	background: #F3F5F8 !important;
 	border-color: #F3F5F8 !important;
 	&:hover {
-		color: rgba(10, 33, 62, 0.6);
+		color: rgba(10, 33, 62, 0.6) !important;
 		background: #F3F5F8 !important;
 		border-color: #F3F5F8 !important;
 	}
@@ -70,14 +65,12 @@ $w-90 : 90%;
 	
 	.PreviewShareProduct-btns {
 		display: block;
-		margin-left: 10%;
 	}
 	.btn-confirm {
-		width: 90%;
-		margin-left: 0% !important;
-		margin-bottom: 4vw;
+		width: 100%;
 	}
 	.btn-edit {
-		width: 90%;
+		width: 100%;
+		margin-bottom: 4vw;
 	}
 }

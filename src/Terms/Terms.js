@@ -61,11 +61,7 @@ function Terms() {
               <Checkboxes />
             </div>
 
-            <div 
-                className="line mt-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <form>
               <div className="container">
@@ -130,7 +126,6 @@ function Terms() {
                 <select 
                   className="custom-select px-3"
                   style={{
-                    padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
                     border: '0.5px solid rgba(10, 33, 62, 0.15)',
                     borderRadius: '5px',
@@ -151,7 +146,6 @@ function Terms() {
                 <select 
                   className="custom-select px-3"
                   style={{
-                    padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
                     border: '0.5px solid rgba(10, 33, 62, 0.15)',
                     borderRadius: '5px',
@@ -176,7 +170,6 @@ function Terms() {
                 <select 
                   className="custom-select px-3"
                   style={{
-                    padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
                     border: '0.5px solid rgba(10, 33, 62, 0.15)',
                     borderRadius: '5px',
@@ -197,7 +190,6 @@ function Terms() {
                 <select 
                   className="custom-select px-3"
                   style={{
-                    padding: '3% 0 3% 0',
                     backgroundColor: '#FCFCFC',
                     border: '0.5px solid rgba(10, 33, 62, 0.15)',
                     borderRadius: '5px',
@@ -211,32 +203,28 @@ function Terms() {
             </div>
             </div>
 
-            <div 
-                className="line my-2" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <div className="container">
             <div>
               <div 
-                className="terms-btn-section my-5"
+                className="terms-btn-section my-5 w-100"
               >
                 <Button 
+                  onClick={goto_cd}
+                  className="terms-button py-2 btn-prev border-0 rounded font-weight-medium" 
+                >
+                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
+                  Previous
+                </Button>
+                <Button 
                   onClick={goto_settings}
-                  className="terms-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
+                  className="terms-button py-2 btn-next border-0 rounded font-weight-semibold"
                 >
                   Next
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </Button>
               
-                <Button 
-                  onClick={goto_cd}
-                  className="terms-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
-                >
-                  <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
-                  Previous
-                </Button>
               </div>
 
             </div>

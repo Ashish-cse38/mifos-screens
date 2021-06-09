@@ -59,11 +59,7 @@ function PersonalDetails() {
               <Checkboxes />
             </div>
 
-            <div 
-                className="PD-line mt-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
     
             <form>
             
@@ -125,32 +121,27 @@ function PersonalDetails() {
               </div>
               </div>
 
-                <div 
-                  className="line" 
-                  style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-                >
-
-                </div>
+                <hr/>
                 <div className="container">
                 <div>
                   <div 
-                    className="PD-btn-section my-5"
+                    className="PD-btn-section my-5 w-100"
                   >
                     <Button 
-                      type="button"
-                      onClick={goto_currency_details}
-                      className="PD-button py-2 ml-4 btn-next font-weight-semibold"
-                    >
-                      Next
-                      <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-                    </Button>
-                  
-                    <Button 
                       onClick={goto_rdr}
-                      className="PD-button py-2 ml-auto btn-prev font-weight-medium" 
+                      className="PD-button py-2 btn-prev font-weight-medium" 
                     >
                       <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                       Previous
+                    </Button>
+
+                    <Button 
+                      type="button"
+                      onClick={goto_currency_details}
+                      className="PD-button py-2 btn-next font-weight-semibold"
+                    >
+                      Next
+                      <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                     </Button>
                   </div>
 

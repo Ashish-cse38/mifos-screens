@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
-import './Accounting.scss';
+import './AccountingTab.scss';
 import ReactDOM from 'react-dom';
 import { useHistory } from 'react-router-dom';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -83,7 +83,7 @@ const Principal = (props) => {
   );
 }
 
-function Accounting() {
+function AccountingTab() {
 
   let history = useHistory();
   const[lck_in, setLck_in] = useState('');
@@ -162,11 +162,7 @@ function Accounting() {
               <Checkboxes />
             </div>
           
-            <div 
-                className="line mt-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <form>
               <div className="container">
@@ -199,12 +195,7 @@ function Accounting() {
               </Button>
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
-
+            <hr/>
             <div>
               <h5>Assets</h5>
             </div>
@@ -235,11 +226,7 @@ function Accounting() {
 
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>Liabilities</h5>
@@ -293,11 +280,7 @@ function Accounting() {
               </div>
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>Expenses</h5>
@@ -329,11 +312,7 @@ function Accounting() {
 
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <h5>Income</h5>
@@ -388,11 +367,7 @@ function Accounting() {
               </div>
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div style={{fontSize: '20px'}}>
 
@@ -453,11 +428,7 @@ function Accounting() {
 
             </div>
 
-            <div 
-                className="line-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-            >
-            </div>
+            <hr/>
 
             <div>
               <div class="custom-control custom-switch my-2">
@@ -477,30 +448,25 @@ function Accounting() {
             </div>
 
 
-            <div 
-                className="line my-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <div className="container">
               <div 
-                className="accounting-btn-section my-5"
+                className="accounting-btn-section my-5 w-100"
               >
                 <Button 
-                  onClick={goto_IRC}
-                  className="accounting-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
-                >
-                  Next
-                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-                </Button>
-              
-                <Button 
                   onClick={goto_charges}
-                  className="accounting-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium" 
+                  className="accounting-button py-2 btn-prev border-0 rounded font-weight-medium" 
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
+                </Button>
+                <Button 
+                  onClick={goto_IRC}
+                  className="accounting-button py-2 btn-next border-0 rounded font-weight-semibold"
+                >
+                  Next
+                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </Button>
               </div>
 
@@ -514,4 +480,4 @@ function Accounting() {
   );
 }
 
-export default Accounting;
+export default AccountingTab;

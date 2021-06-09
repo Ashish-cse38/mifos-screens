@@ -12,7 +12,7 @@ import Terms from './Terms/Terms';
 import Settings from './Settings/Settings';
 import InterestRateChart from './InterestRateChart/InterestRateChart';
 import Charges from './Charges/Charges';
-import Accounting from './Accounting/Accounting';
+import AccountingTab from './AccountingTab/AccountingTab';
 
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
 
         <Route path="/charges" component={Charges} />
 
-        <Route path="/accountingTab" component={Accounting} />
+        <Route path="/accountingTab" component={AccountingTab} />
     </Router>
     </div>;
 }

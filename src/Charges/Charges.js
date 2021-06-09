@@ -9,6 +9,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faCheck, faInfoCircle, faPlusCircle, faTimes, faTimesCircle, faChevronDown, faPen } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 import Checkboxes from './Checkbox';
+import swal from 'sweetalert';
 
 function Charges() {
 
@@ -63,6 +64,11 @@ function Charges() {
   const [count, setCount] = useState(9);
 
   function add_tags(val) {
+    tags_set.forEach((el) => {
+      if (el == val) {
+        swal({icon: 'error', title: 'You have already added this Charge tag'});
+      }
+    });
     setTags_set(new Set(tags_set).add(val));
   }
 
@@ -125,12 +131,7 @@ return (
               <Checkboxes />
             </div>
 
-            <div 
-                className="line mt-2 mb-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
-
+            <hr/>
             <form>
             <div className="container">
               <div className="my-4">
@@ -167,7 +168,7 @@ return (
                 {[...tags_set].map((entry) => (
                   <>
                   <div
-                    className="pt-2 px-2 d-flex mr-3"
+                    className="pt-2 px-2 d-flex mr-3 align-items-center"
                     style={{
                       background: 'rgba(81, 142, 248, 0.1)',
                       border: '1.5px solid #518EF8',
@@ -175,22 +176,22 @@ return (
                       color: '#518EF8'
                     }}
                   >
-                  <p className="mx-2 mt-2"
+                  <p className="mt-2 px-2"
                     style={{
                       whiteSpace: 'nowrap',
                     }}>
                     {entry}
                   </p>
-                  <Button
-                    className="btn-charges ml-auto border-0"
+                  <div
+                    className="ml-auto border-0"
                   >
                   <FontAwesomeIcon 
                     onClick={() => {delete_tags(entry)}}
                     className="mr-2"
                     icon={faTimesCircle}
-                    style={{color: '#FD5E1A', fontSize: '22px'}} 
+                    style={{color: '#FD5E1A', fontSize: '22px', cursor: 'pointer'}} 
                     />
-                  </Button>
+                  </div>
                 </div>
                 </>
                 ))}
@@ -199,11 +200,7 @@ return (
 
             </div>
 
-            <div 
-                className="line my-2" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <div 
               className="my-4"
@@ -300,30 +297,25 @@ return (
             </div>
             </div>
 
-            <div 
-                className="line my-5" 
-                style={{border: '0.5px solid rgba(10, 33, 62, 0.1)'}}
-              >
-            </div>
+            <hr/>
 
             <div className="container">
               <div 
-                className="charges-btn-section my-5"
+                className="charges-btn-section my-5 w-100"
               >
                 <Button 
-                  onClick={goto_accounting}
-                  className="charges-button py-2 ml-4 btn-next border-0 rounded font-weight-semibold"
-                >
-                  Next
-                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
-                </Button>
-              
-                <Button 
                   onClick={goto_IRC}
-                  className="charges-button py-2 ml-auto btn-prev border-0 rounded font-weight-medium"
+                  className="charges-button py-2 btn-prev border-0 rounded font-weight-medium"
                 >
                   <FontAwesomeIcon className="mr-3" icon={faArrowLeft} />
                   Previous
+                </Button>
+                <Button 
+                  onClick={goto_accounting}
+                  className="charges-button py-2 btn-next border-0 rounded font-weight-semibold"
+                >
+                  Next
+                  <FontAwesomeIcon className="ml-3" icon={faArrowRight} />
                 </Button>
               </div>
 
