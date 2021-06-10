@@ -77,33 +77,34 @@ function RecurringDepositProducts() {
         </div>
 
         <motion.div 
-          className="crdr-search mx-auto d-flex"
+          className="crdr-search mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0 }}
         >
-          <span 
-            className="input-span input-group-append bg-white border-right-0 mb-4 pl-2" 
-          >
+          <div className="input-group-lg d-flex">
             <span 
-              className="input-group-text bg-transparent border-0" st>
-              <FontAwesomeIcon className="search-icon mr-3 mt-1" icon={faSearch} style={{fontSize: '20px'}}/>
+              className="input-span input-group-append bg-white border-right-0 mb-4 pl-2" 
+            >
+              <span 
+                className="input-group-text bg-transparent border-0" st>
+                <FontAwesomeIcon className="search-icon mr-3 mt-1" icon={faSearch} style={{fontSize: '20px'}}/>
+              </span>
             </span>
-          </span>
-
         
-          <input
-            id="filter-by-name"
-            onChange={filterFunction}
-            className="search-bar form-control border-left-0 mb-4" type="search" placeholder="Filter by name..."
-            style={{
-              border: '0.5px solid rgba(10, 33, 62, 0.15)',
-              fontSize: '18px',
-              padding: '4% 4% 4% 0',
-              borderRadius: '0 39.5px 39.5px 0',
-              boxShadow: '0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802)'
-            }}
-          />
+            <input
+              id="filter-by-name"
+              onChange={filterFunction}
+              className="search-bar form-control border-left-0 mb-4" type="search" placeholder="Filter by name..."
+              style={{
+                border: '0.5px solid rgba(10, 33, 62, 0.15)',
+                fontSize: '18px',
+                padding: '4% 4% 4% 0',
+                borderRadius: '0 39.5px 39.5px 0',
+                boxShadow: '0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802)'
+              }}
+            />
+          </div>
          
         </motion.div>
         
