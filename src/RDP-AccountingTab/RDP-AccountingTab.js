@@ -359,25 +359,26 @@ function RDP_AccountingTab() {
                       {principals}
 
                       <div className="row mt-4 mb-3">
-                        <div className="col">
-                        <div className="form-group">
-                        <Button 
-                          className="py-3 mx-3" 
-                          onClick={add_principal}
-                          style={{
-                          color: '#518EF8',
-                          background: 'rgba(81, 142, 248, 0.1)',
-                          borderRadius: '100px',
-                          fontSize: '18px'
-                        }}>
-                          <FontAwesomeIcon className="icon mr-3" icon={faPlusCircle}
-                            style={{
+                        <div className="col-md-4">
+                          <div className="form-group">
+                            <div 
+                              className="py-3 mx-3 px-4" 
+                              onClick={add_principal}
+                              style={{
                               color: '#518EF8',
-                              fontSize: '22px'
-                            }} />
-                          Add Another Principal
-                        </Button>
-                        </div>
+                              background: 'rgba(81, 142, 248, 0.1)',
+                              borderRadius: '100px',
+                              fontSize: '18px',
+                              cursor: 'pointer'
+                            }}>
+                              <FontAwesomeIcon className="icon mr-3" icon={faPlusCircle}
+                                style={{
+                                  color: '#518EF8',
+                                  fontSize: '22px'
+                                }} />
+                              Add Another Principal
+                            </div>
+                          </div>
                         </div>
                       </div>
 

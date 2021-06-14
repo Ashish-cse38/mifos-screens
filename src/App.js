@@ -16,6 +16,8 @@ import RDP_AccountingTab from './RDP-AccountingTab/RDP-AccountingTab';
 import CRDP_Preview from './CRDP_Preview/CRDP_Preview';
 import Charge_details from './Charge_details/Charge_details';
 import Edit_charge from './Edit_charge/Edit_charge';
+import FloatingRates from './FloatingRates/FloatingRates';
+import FloatingRateDetails from './FloatingRateDetails/FloatingRateDetails';
 
 function App() {
   return <div className ="routes">
@@ -43,6 +45,10 @@ function App() {
         <Route path="/charge-details" component={Charge_details} />
 
         <Route path="/edit-charge" component={Edit_charge} />
+
+        <Route path="/floating-rates" component={FloatingRates} />
+
+        <Route path="/floating-rate-details" component={FloatingRateDetails} />
     </Router>
     </div>;
 }

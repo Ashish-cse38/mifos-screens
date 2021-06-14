@@ -49,7 +49,7 @@ function RDP_CurrencyDetails() {
           </h5>
         
           <motion.div
-            className="h-auto bg-white mx-auto pb-4 mb-4"
+            className="bg-white mx-auto pb-4 mb-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -74,7 +74,6 @@ function RDP_CurrencyDetails() {
                         <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                       </label>
                       <select 
-                        id="currency"
                         className="custom-select"
                       >
                         <option selected>Select Currency</option>
