@@ -124,11 +124,7 @@ function RDP_Terms() {
                       </label>
                       <select 
                         className="custom-select px-3"
-                        style={{
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}>
+                      >
                         <option selected value="1">Daily</option>
                         <option value="2">Monthly</option>
                         <option value="3">Annually</option>
@@ -144,11 +140,7 @@ function RDP_Terms() {
                       </label>
                       <select 
                         className="custom-select px-3"
-                        style={{
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}>
+                      >
                         <option value="1">Daily</option>
                         <option selected value="2">Monthly</option>
                         <option value="3">Annually</option>
@@ -168,11 +160,7 @@ function RDP_Terms() {
                       </label>
                       <select 
                         className="custom-select px-3"
-                        style={{
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}>
+                      >
                         <option selected value="1">Daily Balance</option>
                         <option value="2">Monthly Balance</option>
                         <option value="3">Annual Balance</option>
@@ -188,11 +176,7 @@ function RDP_Terms() {
                       </label>
                       <select 
                         className="custom-select px-3"
-                        style={{
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}>
+                      >
                         <option selected value="1">365</option>
                         <option value="2">366</option>
                         <option value="3">Can't say</option>

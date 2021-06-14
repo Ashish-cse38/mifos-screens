@@ -153,14 +153,15 @@ function RDP_InterestRateChart() {
 
                   <div className="mt-5"
                     style={{display: `${add_prin}`}}>
-                    <Button 
+                    <div
                       className="py-3 px-4" 
                       onClick={add_principal}
                       style={{
                       color: '#518EF8',
                       background: 'rgba(81, 142, 248, 0.1)',
                       borderRadius: '100px',
-                      fontSize: '18px'
+                      fontSize: '18px',
+                      cursor: 'pointer'
                       }}
                     >
                       <FontAwesomeIcon className="icon mr-3" icon={faPlusCircle}
@@ -169,7 +170,7 @@ function RDP_InterestRateChart() {
                           fontSize: '22px'
                         }} />
                       Add Another Principal
-                    </Button>
+                    </div>
                   </div>
 
                 </div>

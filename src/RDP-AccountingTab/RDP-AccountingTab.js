@@ -178,7 +178,7 @@ function RDP_AccountingTab() {
                   </Button>
                   <Button class="px-3 py-2"
                     onClick={select_accounting}
-                  style={{
+                    style={{
                     background: 'rgba(81, 142, 248, 0.1)',
                     border: '1px solid #518EF8',
                     borderRadius: '100px',
@@ -204,12 +204,6 @@ function RDP_AccountingTab() {
                       </label>
                       <select 
                         className="custom-select custom-select h-75 px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Select an option</option>
                         <option value="1">One</option>
@@ -237,12 +231,6 @@ function RDP_AccountingTab() {
                       </label>
                       <select 
                         className="custom-select custom-select h-75 px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Select an option</option>
                         <option value="1">One</option>
@@ -260,12 +248,6 @@ function RDP_AccountingTab() {
                       </label>
                       <select 
                         className="custom-select custom-select h-75 px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Select an option</option>
                         <option value="1">One</option>
@@ -291,12 +273,6 @@ function RDP_AccountingTab() {
                       </label>
                       <select 
                         className="custom-select custom-select h-75 px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Select an option</option>
                         <option value="1">One</option>
@@ -322,12 +298,6 @@ function RDP_AccountingTab() {
                       </label>
                       <select 
                         className="custom-select custom-select h-75 px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Select an option</option>
                         <option value="1">One</option>
@@ -346,12 +316,6 @@ function RDP_AccountingTab() {
                       </label>
                       <select 
                         className="custom-select custom-select h-75 px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                          }}
                         >
                           <option selected>Select an option</option>
                           <option value="1">One</option>

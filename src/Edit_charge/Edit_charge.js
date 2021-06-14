@@ -81,7 +81,7 @@ function Edit_charge() {
                   </label>
                   <select
                     className="custom-select px-3"
-                    type="select">
+                  >
                     <option selected>Select Currency</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
@@ -108,7 +108,7 @@ function Edit_charge() {
                       </label>
                       <select
                         className="custom-select px-3"
-                        type="select">
+                      >
                         <option selected>Indian Rupee</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -126,7 +126,7 @@ function Edit_charge() {
                       </label>
                       <select
                         className="custom-select px-3"
-                        type="select">
+                      >
                         <option selected>Disbursement</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -141,7 +141,7 @@ function Edit_charge() {
                       </label>
                       <select
                         className="custom-select px-3"
-                        type="select">
+                      >
                         <option selected>%Amount</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -159,7 +159,7 @@ function Edit_charge() {
                       </label>
                       <select
                         className="custom-select px-3"
-                        type="select">
+                      >
                         <option selected>Regular</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -191,7 +191,7 @@ function Edit_charge() {
                       </label>
                       <select
                         className="custom-select px-3"
-                        type="select">
+                      >
                         <option selected>Disbursement</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
@@ -264,7 +264,7 @@ function Edit_charge() {
                       </label>
                       <select
                         className="custom-select px-3"
-                        type="select">
+                      >
                         <option selected>Select Option</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>

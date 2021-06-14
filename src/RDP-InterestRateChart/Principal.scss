@@ -4,20 +4,15 @@
   border-radius: 15px;
 }
 .custom-select {
-  background-color: #FCFCFC;
   border: 0.5px solid rgba(10, 33, 62, 0.15);
-  font-size: 18px;
-  //padding: 5% 4% 5% 4%;
   border-radius: 5px;
-  //padding: 3% 0% 3% 0%;
-	line-height: 42px;
+}
+select {
+  background-color: #FCFCFC !important;
 }
 .form-control {
   border: 0.5px solid rgba(10, 33, 62, 0.15);
-  font-size: 18px;
-  //padding: 5% 4% 5% 4%;
   border-radius: 5px;
-	height: 60px;
 }
 input {
 	background-color: #FCFCFC !important;

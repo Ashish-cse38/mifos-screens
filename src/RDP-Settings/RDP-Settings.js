@@ -145,12 +145,6 @@ function RDP_Settings() {
                     <div className="form-group">
                       <select 
                         className="custom-select px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Days</option>
                         <option value="1">One</option>
@@ -181,12 +175,6 @@ function RDP_Settings() {
                   <div className="form-group">
                     <select 
                       className="custom-select px-3"
-                      style={{
-                        //padding: '3% 0 3% 0',
-                        backgroundColor: '#FCFCFC',
-                        border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                        borderRadius: '5px',
-                      }}
                     >
                       <option selected>Days</option>
                       <option value="1">One</option>
@@ -217,12 +205,6 @@ function RDP_Settings() {
                     <div className="form-group">
                       <select 
                         className="custom-select px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Days</option>
                         <option value="1">One</option>
@@ -253,12 +235,6 @@ function RDP_Settings() {
                     <div className="form-group">
                       <select
                         className="custom-select px-3"
-                        style={{
-                          //padding: '3% 0 3% 0',
-                          backgroundColor: '#FCFCFC',
-                          border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                          borderRadius: '5px',
-                        }}
                       >
                         <option selected>Days</option>
                         <option value="1">One</option>
@@ -294,13 +270,6 @@ function RDP_Settings() {
                               <input
                                 id="product-name"
                                 className="form-control px-3" type="search"
-                                style={{
-                                  background: '#FCFCFC',
-                                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                                  fontSize: '18px',
-                                  //padding: '5% 4% 5% 4%',
-                                  borderRadius: '5px',
-                                }}
                               />
                             </div>
                           </div>
@@ -309,14 +278,6 @@ function RDP_Settings() {
                             <div className="form-group">
                               <select 
                                 className="custom-select px-3"
-                                //value={lck_in}
-                                style={{
-                                  //padding: '3% 0 3% 0',
-                                  //height: '65%',
-                                  backgroundColor: '#FCFCFC',
-                                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                                  borderRadius: '5px',
-                                }}
                               >
                                 <option selected>On Whole Team</option>
                                 <option value="1">One</option>
@@ -373,14 +334,6 @@ function RDP_Settings() {
                               </label>
                               <select 
                                 className="custom-select px-3"
-                                //value={lck_in}
-                                style={{
-                                  //padding: '3% 0 3% 0',
-                                  //height: '65%',
-                                  backgroundColor: '#FCFCFC',
-                                  border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                                  borderRadius: '5px',
-                                }}
                               >
                                 <option selected>Select an option</option>
                                 <option value="1">One</option>

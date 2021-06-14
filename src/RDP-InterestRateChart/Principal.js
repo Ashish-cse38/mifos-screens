@@ -52,95 +52,65 @@ function Principal(props) {
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
                 <input
-                  id="product-name"
                   className="form-control px-3" type="text"
-                  //onChange={data_filler}
-                  style={{
-                    background: '#FCFCFC',
-                    border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                    fontSize: '18px',
-                    borderRadius: '5px',
-                  }}
                 />
 
               </div>
 
               <div className="col-md-6 my-1">
-              <div className="form-group">
-                <label style={{visibility: 'hidden'}}>
-                  xxxx
-                </label>
-                
-                <input
-                  id="product-name"
-                  className="form-control px-3" type="search"
-                  style={{
-                    background: '#FCFCFC',
-                    border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                    fontSize: '18px',
-                    borderRadius: '5px',
-                  }}
-                />
-                </div>
-              </div>
-            </div>
-
-            <div className="row py-2">
-              <div className="col-md-6">
-              <div className="form-group">
-                <label>
-                  Period Type
-                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-                </label>
-                <select 
-                  className="custom-select px-3"
-                >
-                  <option selected>On Whole Team</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-                </div>
-              </div>
-            </div>
-
-            <div className="row py-2">
-              <div className="col-md-6">
-              <div className="form-group">
-                <label>
-                  Period From / To
-                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-                </label>
-                <input
-                  id="product-name"
-                  className="form-control px-3" type="search"
-                  style={{
-                    background: '#FCFCFC',
-                    border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                    fontSize: '18px',
-                    borderRadius: '5px',
-                  }}
-                />
-                </div>
-              </div>
-
-              <div className="col-md-6">
-              <div className="form-group">
-              <label style={{visibility: 'hidden'}}>
-                  xxxx
-                </label>
-                <input
-                    id="product-name"
+                <div className="form-group">
+                  <label style={{visibility: 'hidden'}}>
+                    xxxx
+                  </label>
+                  
+                  <input
                     className="form-control px-3" type="search"
-                    style={{
-                      background: '#FCFCFC',
-                      border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                      fontSize: '18px',
-
-                      borderRadius: '5px',
-                    }}
                   />
-                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="row py-2">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label>
+                    Period Type
+                    <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+                  </label>
+                  <select 
+                    className="custom-select px-3"
+                  >
+                    <option selected>On Whole Team</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div className="row py-2">
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label>
+                    Period From / To
+                    <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+                  </label>
+                  <input
+                    className="form-control px-3" type="search"
+                  />
+                </div>
+              </div>
+
+              <div className="col-md-6">
+                <div className="form-group">
+                  <label style={{visibility: 'hidden'}}>
+                      xxxx
+                  </label>
+                  <input
+                    className="form-control px-3" type="search"
+                  />
+                </div>
               </div>
             </div>
           
@@ -153,34 +123,20 @@ function Principal(props) {
                   <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
                 </label>
                 <input
-                  id="product-name"
                   className="form-control px-3" type="search"
-                  style={{
-                    background: '#FCFCFC',
-                    border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                    fontSize: '18px',
-                    borderRadius: '5px',
-                  }}
                 />
                 </div>
               </div>
 
               <div className="col-md-6">
-              <div className="form-group">
-                <label>
-                  Description
-                  <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-                </label>
-                <input
-                  id="product-name"
-                  className="form-control px-3" type="search"
-                  style={{
-                    background: '#FCFCFC',
-                    border: '0.5px solid rgba(10, 33, 62, 0.15)',
-                    fontSize: '18px',
-                    borderRadius: '5px',
-                  }}
-                />
+                <div className="form-group">
+                  <label>
+                    Description
+                    <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+                  </label>
+                  <input
+                    className="form-control px-3" type="search"
+                  />
                 </div>
               </div>
             </div>
