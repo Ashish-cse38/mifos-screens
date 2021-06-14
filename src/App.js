@@ -6,14 +6,16 @@ import {
 } from "react-router-dom";
 import PreviewShareProduct from './PreviewShareProduct/PreviewShareProduct';
 import RecurringDepositProducts from './RecurringDepositProducts/RecurringDepositProducts';
-import PersonalDetails from './PersonalDetails/PersonalDetails';
-import CurrencyDetails from './CurrencyDetails/CurrencyDetails';
-import Terms from './Terms/Terms';
-import Settings from './Settings/Settings';
-import InterestRateChart from './InterestRateChart/InterestRateChart';
-import Charges from './Charges/Charges';
-import AccountingTab from './AccountingTab/AccountingTab';
-
+import RDP_PersonalDetails from './RDP-PersonalDetails/RDP-PersonalDetails';
+import RDP_CurrencyDetails from './RDP-CurrencyDetails/RDP-CurrencyDetails';
+import RDP_Terms from './RDP-Terms/RDP-Terms';
+import RDP_Settings from './RDP-Settings/RDP-Settings';
+import InterestRateChart from './RDP-InterestRateChart/RDP-InterestRateChart';
+import RDP_Charges from './RDP-Charges/RDP-Charges';
+import RDP_AccountingTab from './RDP-AccountingTab/RDP-AccountingTab';
+import CRDP_Preview from './CRDP_Preview/CRDP_Preview';
+import Charge_details from './Charge_details/Charge_details';
+import Edit_charge from './Edit_charge/Edit_charge';
 
 function App() {
   return <div className ="routes">
@@ -22,19 +24,25 @@ function App() {
 
         <Route path="/recurring-deposit-products" component={RecurringDepositProducts} />
          
-        <Route path="/personal-details" component={PersonalDetails} />
+        <Route path="/rdp-personal-details" component={RDP_PersonalDetails} />
 
-        <Route path="/currency-details" component={CurrencyDetails} />
+        <Route path="/rdp-currency-details" component={RDP_CurrencyDetails} />
 
-        <Route path="/terms" component={Terms} />
+        <Route path="/rdp-terms" component={RDP_Terms} />
 
-        <Route path="/settings" component={Settings} />
+        <Route path="/rdp-settings" component={RDP_Settings} />
 
-        <Route path="/interest-rate-chart" component={InterestRateChart} />
+        <Route path="/rdp-interest-rate-chart" component={InterestRateChart} />
 
-        <Route path="/charges" component={Charges} />
+        <Route path="/rdp-charges" component={RDP_Charges} />
 
-        <Route path="/accountingTab" component={AccountingTab} />
+        <Route path="/rdp-accountingTab" component={RDP_AccountingTab} />
+
+        <Route path="/crdp-preview" component={CRDP_Preview} />
+
+        <Route path="/charge-details" component={Charge_details} />
+
+        <Route path="/edit-charge" component={Edit_charge} />
     </Router>
     </div>;
 }

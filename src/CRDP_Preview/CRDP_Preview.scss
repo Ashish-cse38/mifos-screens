@@ -1,4 +1,4 @@
-.PSP-rounded {
+.CRDP-rounded {
 	border-radius: 15px;
 	.greydiv {
 		background: #F3F5F8;
@@ -8,11 +8,15 @@
 		background: #FBFBFB;
 	}
 }
-.PreviewShareProduct-btns {
+.CRDP_Preview-btns {
 	display: flex;
 	justify-content: flex-end;
 }
-.psp-btn-confirm {
+.CRDP_Preview-checkbox-div {
+  width: 90%;
+}
+
+.CRDP_Preview-btn-confirm {
 	color: white !important;
 	background: #1AC29A !important;
 	border-color: #1AC29A !important;
@@ -22,7 +26,7 @@
 		border-color: #1AC29A !important;
 	}
 }
-.psp-btn-edit {
+.CRDP_Preview-btn-edit {
 	margin-right: 20px;
 	color: rgba(10, 33, 62, 0.6) !important;
 	background: #F3F5F8 !important;
@@ -34,15 +38,18 @@
 		border-color: #F3F5F8 !important;
 	}
 }
-@media only screen and (max-width: 425px) {
-	
-	.PreviewShareProduct-btns {
+
+@media only screen and (max-width: 500px) {
+	.CRDP_Preview-checkbox-div {
+		width: 240%;
+	}
+	.CRDP_Preview-btns {
 		display: block;
 	}
-	.psp-btn-confirm {
+	.CRDP_Preview-btn-confirm {
 		width: 100%;
 	}
-	.psp-btn-edit {
+	.CRDP_Preview-btn-edit {
 		width: 100%;
 		margin-bottom: 4vw;
 	}
