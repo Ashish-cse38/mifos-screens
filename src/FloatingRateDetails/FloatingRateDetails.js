@@ -173,7 +173,7 @@ function FloatingRateDetails() {
 
             <div class="custom-control custom-switch mb-5">
               <input onClick={API_div} type="checkbox" class="custom-control-input" id="customSwitch2" />
-              <label class="custom-control-label RDP-Accounting-text-small" for="customSwitch2">
+              <label class="custom-control-label FRD-text-small" for="customSwitch2">
                 Add Floating Rate Periods
               </label>
             </div>
@@ -220,7 +220,7 @@ function FloatingRateDetails() {
 
           <div className="container">
             <div 
-              className="Edit_charge-btns my-4 w-100"
+              className="FRD-btns my-4 w-100"
             >
               <Button 
                 className="py-2 px-4 btn-cancel font-weight-medium text-break" 
