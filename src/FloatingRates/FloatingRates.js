@@ -30,8 +30,8 @@ const FloatingRates = () => {
     setUsers(items)
   }, [])
   
-  function goto_pd() {
-    history.push("/rdp-personal-details");
+  function goto_details() {
+    history.push("/floating-rate-details");
   }
 
   function filterFunction() {
@@ -69,7 +69,7 @@ const FloatingRates = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                onClick={goto_pd} >
+                onClick={goto_details} >
                 <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
                 Create Floating Rate
               </motion.button>

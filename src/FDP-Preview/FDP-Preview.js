@@ -12,10 +12,6 @@ const FDP_Preview = () => {
 
   let history = useHistory();
 
-  function goto_charge_details() {
-    history.push('/charge-details');
-  }
-
   
   return (
       <div 
@@ -505,7 +501,6 @@ const FDP_Preview = () => {
                 </Button>
                 <Button 
                   className="py-2 FDP-Preview-btn-confirm rounded border-0 font-weight-semibold text-break"
-                  onClick={goto_charge_details}
                 >
                   Confirm
                   <FontAwesomeIcon className="ml-3" icon={faArrowRight} />

@@ -1,24 +1,24 @@
 import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import './ManageTaxComponents.scss';
+import './Charges_list.scss';
 import { useHistory } from 'react-router-dom';
 import Table from 'react-bootstrap/Table';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPen, faPlusCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
-const ManageTaxComponents = () => {
+const Charges_list = () => {
 
   let history = useHistory();
 
-  const items = [{Name: 'Wade Warren', Percentage: '12.5%', CreditAccountType: 'Asset', StartDate: '03 April 2021'},
-  {Name: 'Jane Cooper', Percentage: '12.5%', CreditAccountType: 'Liability', StartDate: '03 April 2021'},
-  {Name: 'Wade Warren', Percentage: '12.5%', CreditAccountType: 'Equity', StartDate: '03 April 2021'},
-  {Name: 'Jane Cooper', Percentage: '12.5%', CreditAccountType: 'Income', StartDate: '03 April 2021'},
-  {Name: 'Wade Warren', Percentage: '12.5%', CreditAccountType: 'Expense', StartDate: '03 April 2021'},
-  {Name: 'Leonardo Da Vinci', Percentage: '12.5%', CreditAccountType: 'Asset', StartDate: '03 April 2021'},
-  {Name: 'Wade Warren', Percentage: '12.5%', CreditAccountType: 'Liability', StartDate: '03 April 2021'},
-  {Name: 'Robert Fox', Percentage: '12.5%', CreditAccountType: 'Asset', StartDate: '03 April 2021'}
+  const items = [{Name: 'Charge Name', ChargesAppliedTo: 'Loan', IsPenalty: 'False', Status: 'Active'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'Saving & Deposits', IsPenalty: 'False', Status: 'Inactive'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'CLient', IsPenalty: 'True', Status: 'Active'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'Shares', IsPenalty: 'False', Status: 'Active'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'Savings & Deposits', IsPenalty: 'True', Status: 'Inactive'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'Loan', IsPenalty: 'True', Status: 'Active'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'Loan', IsPenalty: 'False', Status: 'Active'},
+  {Name: 'Charge Name', ChargesAppliedTo: 'Shares', IsPenalty: 'False', Status: 'Active'}
   ];
 
   const filters = [];
@@ -30,7 +30,11 @@ const ManageTaxComponents = () => {
   }, [])
   
   function goto_create() {
-    history.push("/create-tax-components");
+    history.push("/create-charge");
+  }
+
+  function goto_edit() {
+    history.push("/charge-details");
   }
 
   function filterFunction() {
@@ -58,19 +62,20 @@ const ManageTaxComponents = () => {
           <div className="row mb-2">
             <div className="col-md-6">
               <h5 className="py-4">
-                Manage Tax Components
+                List of Charges
               </h5>
             </div>
 
             <div className="col-md-6 py-2 d-flex justify-content-end">
               <motion.button
-                className="create-tc mt-2 py-2 px-3"
+                className="create-cl mt-2 py-2 px-3"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                onClick={goto_create} >
+                onClick={goto_create} 
+              >
                 <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
-                Create Tax Component
+                Create Charge
               </motion.button>
             </div>
           </div>
@@ -80,7 +85,7 @@ const ManageTaxComponents = () => {
           
           <div className="row">
             <motion.div 
-              className="mtc-search mx-auto"
+              className="mcl-search mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0 }}
@@ -132,19 +137,19 @@ const ManageTaxComponents = () => {
                     <th 
                       className="py-3 font-weight-normal text-center" 
                     >
-                      Created By
+                      Charges Applied To
                       <FontAwesomeIcon className="ml-3" icon={faChevronDown} />
                     </th>
                     <th 
                       className="py-3 font-weight-normal text-center" 
                     >
-                      Is Base Lending Rate ?
+                      Is Penalty
                       <FontAwesomeIcon className="ml-3" icon={faChevronDown} />
                     </th>
                     <th 
                       className="py-3 font-weight-normal text-center" 
                     >
-                      StartDate
+                      Status
                       <FontAwesomeIcon className="ml-3" icon={faChevronDown} />
                     </th>
                     <th 
@@ -168,25 +173,28 @@ const ManageTaxComponents = () => {
                     <td 
                       className="py-3 text-center" 
                     >
-                      {user.Percentage}
+                      {user.ChargesAppliedTo}
                     </td>
                     <td 
                       className="py-3 text-center" 
                     >
-                      {user.CreditAccountType}
+                      {user.IsPenalty}
                     </td>
                     <td 
                       className="py-3 text-center" 
                     >
-                      <div 
+                       <div 
                         className="pt-1 pb-1 mx-auto" 
+                        style={user.Status==='Active' ? {width: '80px', color: '#0A9D7A', background: 'rgba(10, 157, 122, 0.1)', borderRadius: '100px'}
+                                : {width: '80px', color: '#FD5E1A', background: 'rgba(253, 94, 26, 0.1)', borderRadius: '100px'}}
                       >
-                        {user.StartDate}                   
+                        {user.Status}                   
                       </div>
                     </td>
                     <td 
+                      onClick={goto_edit}
                       className="py-3 pr-4 text-center" 
-                      style={{color: '#518EF8'}}
+                      style={{color: '#518EF8', cursor: 'pointer'}}
                     >
                       <FontAwesomeIcon className="mr-2" icon={faPen} />
                       Edit
@@ -206,4 +214,4 @@ const ManageTaxComponents = () => {
   );
 }
 
-export default ManageTaxComponents;
+export default Charges_list;

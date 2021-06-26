@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
 
 const Principal = (props) => {
+
   return (
     <>
     <div className="container">
@@ -86,6 +87,12 @@ const FloatingRateDetails = () => {
   const [apply_pi, set_apply_pi] = useState('none');
   const [principals, setPrincipals] = useState([]);
   const [val, set_val] = useState(true);
+
+  let history = useHistory();
+
+  function goto_cancel() {
+    history.push("/floating-rates");
+  }
 
   function add_principal() {
     setPrincipals([...principals, <Principal id={uuidv4().toString()} array={principals}/>]);
@@ -229,6 +236,7 @@ const FloatingRateDetails = () => {
               className="FRD-btns my-4 w-100"
             >
               <Button 
+                onClick={goto_cancel}
                 className="py-2 px-4 btn-cancel font-weight-medium text-break" 
               >
                 Cancel

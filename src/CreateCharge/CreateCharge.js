@@ -3,12 +3,17 @@ import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import './CreateCharge.scss';
 import { useHistory } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faChevronDown, faSave, faPlusCircle, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import { faSave, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
 const CreateCharge = () => {
+  let history = useHistory();
+
+  function goto_cancel() {
+    history.push("/charges");
+  }
+
   return (
     <div
       id="CreateTaxComponents"
@@ -195,6 +200,7 @@ const CreateCharge = () => {
               className="CC-btn-section my-4"
             >
               <Button 
+                onClick={goto_cancel}
                 className="py-2 px-4 btn-cancel font-weight-medium text-break" 
               >
                 Cancel

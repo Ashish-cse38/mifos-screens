@@ -13,11 +13,6 @@ import Checkboxes from './Checkbox';
 const RDP_Preview = () => {
 
   let history = useHistory();
-
-  function goto_charge_details() {
-    history.push('/charge-details');
-  }
-
   
   return (
       <div 
@@ -251,7 +246,7 @@ const RDP_Preview = () => {
                     >
                       <thead style={{color: 'rgba(10, 33, 62, 0.6)'}}>
                         <tr className="greydiv">
-                          <th className="py-3">
+                          <th className="py-3 pl-4">
                             Date Range
                           </th>
                           <th className="py-3">
@@ -263,7 +258,7 @@ const RDP_Preview = () => {
                           <th className="py-3">
                             Interest
                           </th>
-                          <th className="py-3 text-right">
+                          <th className="py-3 pr-4 text-right">
                             Description
                           </th>
                         </tr>
@@ -271,7 +266,7 @@ const RDP_Preview = () => {
 
                       <tbody>
                         <tr className="greydiv">
-                          <td className="py-3">
+                          <td className="py-3 pl-4">
                             <p>March 25, 2021</p>
                             <p>March 25, 2021</p>
                           </td>
@@ -286,12 +281,12 @@ const RDP_Preview = () => {
                           <td className="py-3">
                             7.5%
                           </td>
-                          <td className="py-3 text-right">
+                          <td className="py-3 pr-4 text-right">
                             Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed
                           </td>
                         </tr>
                         <tr className="whitediv">
-                        <td className="py-3">
+                          <td className="py-3 pl-4">
                             <p>March 25, 2021</p>
                             <p>March 25, 2021</p>
                           </td>
@@ -306,7 +301,7 @@ const RDP_Preview = () => {
                           <td className="py-3">
                             7.5%
                           </td>
-                          <td className="py-3 text-right">
+                          <td className="py-3 pr-4 text-right">
                             Lorem ipsum dolor sit amet, consecteur adipiscing elit, sed
                           </td>
                         </tr>
@@ -406,7 +401,6 @@ const RDP_Preview = () => {
               </Button>
               <Button 
                 className="py-2 RDP-Preview-btn-confirm rounded border-0 font-weight-semibold text-break"
-                onClick={goto_charge_details}
               >
                 Confirm
                 <FontAwesomeIcon className="ml-3" icon={faArrowRight} />

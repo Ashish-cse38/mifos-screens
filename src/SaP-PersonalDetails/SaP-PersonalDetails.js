@@ -40,7 +40,7 @@ const SaP_PersonalDetails = () => {
         <h5 
           className="py-3"
         >
-          Create Savings Product
+          Create Saving Product
         </h5>
 
         

@@ -45,7 +45,7 @@ const SaP_CurrencyDetails = () => {
           <h5 
             className="py-3"
           >
-            Create Savings Product
+            Create Saving Product
           </h5>
         
           <motion.div

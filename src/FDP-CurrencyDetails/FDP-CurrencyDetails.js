@@ -45,7 +45,7 @@ const FDP_CurrencyDetails = () => {
           <h5 
             className="py-3"
           >
-            Create Recurring Deposit Products
+            Create Fixed Deposit Products
           </h5>
         
           <motion.div

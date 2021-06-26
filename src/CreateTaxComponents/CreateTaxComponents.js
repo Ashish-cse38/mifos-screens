@@ -9,6 +9,12 @@ import { faChevronDown, faSave, faPlusCircle, faInfoCircle } from '@fortawesome/
 import { motion } from 'framer-motion';
 
 const CreateTaxComponents = () => {
+  let history = useHistory();
+
+  function goto_cancel() {
+    history.push("/manage-tax-components");
+  }
+
   return (
     <div
       id="CreateTaxComponents"
@@ -111,6 +117,7 @@ const CreateTaxComponents = () => {
               className="CTC-btn-section my-4"
             >
               <Button 
+                onClick={goto_cancel}
                 className="py-2 px-4 btn-cancel font-weight-medium text-break" 
               >
                 Cancel

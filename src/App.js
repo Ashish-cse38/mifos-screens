@@ -14,6 +14,7 @@ import InterestRateChart from './RDP-InterestRateChart/RDP-InterestRateChart';
 import RDP_Charges from './RDP-Charges/RDP-Charges';
 import RDP_AccountingTab from './RDP-AccountingTab/RDP-AccountingTab';
 import RDP_Preview from './RDP-Preview/RDP-Preview';
+import Charges_list from './Charges_list/Charges_list';
 import Charge_details from './Charge_details/Charge_details';
 import Edit_charge from './Edit_charge/Edit_charge';
 import FloatingRates from './FloatingRates/FloatingRates';
@@ -59,8 +60,8 @@ import ManageTaxConfigurations from './ManageTaxConfigurations/ManageTaxConfigur
 
 function App() {
   return <div className ="routes">
-      <Router>     
-        <Route exact path="/sp-preview" component={SP_Preview} />
+      <Router>    
+        <Route path="/sp-preview" component={SP_Preview} />
 
         <Route path="/recurring-deposit-products" component={RecurringDepositProducts} />
          
@@ -79,6 +80,8 @@ function App() {
         <Route path="/rdp-accountingTab" component={RDP_AccountingTab} />
 
         <Route path="/rdp-preview" component={RDP_Preview} />
+        
+        <Route path="/charges" component={Charges_list} />
 
         <Route path="/charge-details" component={Charge_details} />
 

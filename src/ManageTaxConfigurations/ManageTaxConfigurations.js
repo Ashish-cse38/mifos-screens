@@ -9,6 +9,7 @@ import GS from './greenSetting.png';
 import RMB from './redMoneyBag.png';
 
 const ManageTaxConfiguration = ({Name, Detail, Icon, Background}) => {
+  
   return(
     <div 
       className="bg-white py-3"
@@ -43,6 +44,8 @@ const ManageTaxConfiguration = ({Name, Detail, Icon, Background}) => {
 }
 
 const ManageTaxConfigurations = () => {
+  let history = useHistory();
+
   return(
     <div 
         id="Products"
@@ -60,11 +63,24 @@ const ManageTaxConfigurations = () => {
       >
 
         <div className="d-flex flex-wrap jsutify-content-between">
-          <div className="pr-4 pb-4">
-            <ManageTaxConfiguration Name="Manage Tax Components" Detail="Define Tax Components" Icon={RMB} Background="rgba(218, 71, 62, 0.1)"/>
+          <div 
+            onClick={() => {history.push('/manage-tax-components')}}
+            className="pr-4 pb-4"
+          >
+            <ManageTaxConfiguration 
+              Name="Manage Tax Components" 
+              Detail="Define Tax Components" 
+              Icon={RMB} 
+              Background="rgba(218, 71, 62, 0.1)"/>
           </div>
-          <div className="pr-4 pb-4">
-            <ManageTaxConfiguration Name="Manage Tax Groups" Detail="Define Tax Groups" Icon={GS} Background="rgba(10, 157, 122, 0.1)"/>
+          <div 
+            className="pr-4 pb-4"
+          >
+            <ManageTaxConfiguration 
+              Name="Manage Tax Groups" 
+              Detail="Define Tax Groups" 
+              Icon={GS} 
+              Background="rgba(10, 157, 122, 0.1)"/>
           </div>
         </div>
       </motion.div>
