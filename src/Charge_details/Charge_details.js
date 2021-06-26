@@ -8,7 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faEdit, faChevronRight, faTrash, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
-function Delete_charge() {
+const Delete_charge = () => {
   
   const [show, setShow] = useState(false);
 
@@ -48,7 +48,7 @@ function Delete_charge() {
 ReactDOM.render(<Delete_charge />, document.getElementById('root'));
 
 
-function Charge_details() {
+const Charge_details = () => {
   let history = useHistory();
 
   function gotoEditCharge() {

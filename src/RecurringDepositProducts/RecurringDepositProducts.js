@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faChevronDown, faPen, faPlusCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
-function RecurringDepositProducts() {
+const RecurringDepositProducts = () => {
 
   let history = useHistory();
 
@@ -54,25 +54,27 @@ function RecurringDepositProducts() {
         id="RecurringDepositProducts"
         className="pl-5"
       >
-        <div className="row mb-2">
-              <div className="col-md-6">
-                <h5 className="py-4">
-                  Recurring Deposit Products
-                </h5>
-              </div>
+        <div className="col">
+          <div className="row mb-2">
+                <div className="col-md-6">
+                  <h5 className="py-4">
+                    Recurring Deposit Products
+                  </h5>
+                </div>
 
-              <div className="col-md-6 py-2 d-flex justify-content-end">
-                <motion.button
-                  className="create-rdp mt-2 py-2 px-3"
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                  onClick={goto_pd} >
-                  <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
-                  Create Recurring Deposit Products
-                </motion.button>
-              </div>
+                <div className="col-md-6 py-2 d-flex justify-content-end">
+                  <motion.button
+                    className="create-rdp mt-2 py-2 px-3"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.8 }}
+                    onClick={goto_pd} >
+                    <FontAwesomeIcon className="mr-3 mt-1" icon={faPlusCircle} style={{fontSize: '20px'}}/>
+                    Create Recurring Deposit Products
+                  </motion.button>
+                </div>
 
+          </div>
         </div>
 
         

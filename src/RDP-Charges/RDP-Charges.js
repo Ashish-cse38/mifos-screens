@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 import Checkboxes from './Checkbox';
 import swal from 'sweetalert';
 
-function RDP_Charges() {
+const RDP_Charges = () => {
 
   let history = useHistory();
   const [charges, setCharges] = useState('');

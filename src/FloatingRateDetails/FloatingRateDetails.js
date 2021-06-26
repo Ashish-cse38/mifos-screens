@@ -14,13 +14,15 @@ const Principal = (props) => {
     <div className="container">
       <div 
         id={props.id}
-        className="row">
+        className="row py-2">
         <div className="col-md">
           <div className="form-group">
-            <label>
-              From Date
-              <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-            </label>
+            {props.array.length == 0 ? 
+              <label>
+               From Date
+               <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+              </label> : ''
+            }
             <input
                 className="form-control px-3" 
                 type="date"
@@ -30,10 +32,12 @@ const Principal = (props) => {
 
         <div className="col-md">
           <div className="form-group">
-            <label>
-              Interest Rate
-              <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-            </label>
+          {props.array.length == 0 ? 
+              <label>
+               Interest Rate
+               <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+              </label> : ''
+            }
             <input
                 className="form-control px-3"
             />
@@ -42,10 +46,12 @@ const Principal = (props) => {
 
         <div className="col-md">
           <div className="form-group">
-            <label>
-              Is differential?
-              <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
-            </label>
+          {props.array.length == 0 ? 
+              <label>
+               Is Differential?
+               <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+              </label> : ''
+            }
             <select 
               className="custom-select"
             >
@@ -57,14 +63,14 @@ const Principal = (props) => {
           </div>
         </div>
         
-        <div className="col-md-2 mx-auto mt-4 d-flex justify-content-center" style={{color:'#FD5E1A'}}>
+        <div className="col-md-2 mx-auto d-flex justify-content-center" style={{color:'#FD5E1A'}}>
           <div class="form-group">
             {props.array.length >= 1 ?
-            <div className="mt-3">
+            <div className="mt-1">
               <FontAwesomeIcon 
                 onClick={() => {document.getElementById(props.id).remove();}}
                 icon={faTimesCircle} 
-                style={{color: '#FD5E1A', fontSize: '22px'}}/>
+                style={{color: '#FD5E1A', fontSize: '22px', cursor: 'pointer'}}/>
             </div> : ''
             }
           </div>
@@ -76,7 +82,7 @@ const Principal = (props) => {
   );
 }
 
-function FloatingRateDetails() {
+const FloatingRateDetails = () => {
   const [apply_pi, set_apply_pi] = useState('none');
   const [principals, setPrincipals] = useState([]);
   const [val, set_val] = useState(true);

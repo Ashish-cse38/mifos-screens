@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 import Checkboxes from './Checkbox';
 
 
-function RDP_InterestRateChart() {
+const RDP_InterestRateChart = () => {
 
   let history = useHistory();
 

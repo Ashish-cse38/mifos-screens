@@ -8,7 +8,7 @@ import { faArrowLeft, faArrowRight, faCheck, faCross, faInfoCircle, faTimes } fr
 import { motion } from 'framer-motion';
 import Checkboxes from './Checkbox';
 
-function RDP_CurrencyDetails() {
+const RDP_CurrencyDetails = () => {
 
   let history = useHistory();
   const [dplaces, setDplaces] = useState('');

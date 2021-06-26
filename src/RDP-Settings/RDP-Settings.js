@@ -8,7 +8,7 @@ import { faArrowLeft, faArrowRight, faInfoCircle } from '@fortawesome/free-solid
 import { motion } from 'framer-motion';
 import Checkboxes from './Checkbox';
 
-function RDP_Settings() {
+const RDP_Settings = () => {
 
   let history = useHistory();
   const[lck_in, setLck_in] = useState('');

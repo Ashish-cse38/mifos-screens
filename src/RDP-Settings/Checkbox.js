@@ -45,8 +45,8 @@ const Checkboxes = () => {
           <span className="my-auto" style={{height: '1px',width: '42%'}}>
 
           </span>
-          <span className="circle mx-auto" style={{borderRadius: '100px', background: `${pd_color}`, fontSize: '20px', color: 'white'}}>
-            <p className="text-center py-1 py-1">
+          <span className="circle" style={{borderRadius: '100px', background: `${pd_color}`, fontSize: '20px', color: 'white'}}>
+            <p className="circle text-center" style={{padding: '3px'}}>
               {pd_icon}
             </p>
           </span>
@@ -65,7 +65,7 @@ const Checkboxes = () => {
           </span>
 
           <span className="circle" style={{borderRadius: '100px', background: `${c_color}`, fontSize: '20px', color: '#EEF4FF'}}>
-            <p className="text-center py-1">
+            <p className="circle text-center" style={{padding: '3px'}}>
               {c_icon}
             </p>
           </span>
@@ -84,7 +84,7 @@ const Checkboxes = () => {
           </span>
 
           <span className="circle" style={{borderRadius: '100px', background: `${t_color}`, fontSize: '20px', color: '#EEF4FF'}}>
-            <p className="text-center py-1">
+            <p className="circle text-center" style={{padding: '3px'}}>
               {t_icon}
             </p>
           </span>
@@ -103,7 +103,7 @@ const Checkboxes = () => {
           </span>
 
           <span className="circle" style={{borderRadius: '100px', background: '#518EF8', fontSize: '20px', color: '#EEF4FF'}}>
-            <p className="text-center py-1">4</p>
+            <p className="circle text-center" style={{padding: '3px'}}>4</p>
           </span>
           <span className="my-auto" style={{height: '1px',width: '42%', border: '1px solid #1AC29A', background: '#1AC29A'}}>
 
@@ -120,7 +120,7 @@ const Checkboxes = () => {
           </span>
 
           <span className="circle" style={{borderRadius: '100px', background: '#EEF4FF', fontSize: '20px', color: '#518EF8'}}>
-            <p className="text-center py-1">5</p>
+            <p className="circle text-center" style={{padding: '3px'}}>5</p>
           </span>
           <span className="my-auto" style={{height: '1px',width: '42%', border: '1px solid rgba(36, 64, 143, 0.15)', background: 'rgba(36, 64, 143, 0.15)'}}>
 
@@ -137,7 +137,7 @@ const Checkboxes = () => {
           </span>
 
           <span className="circle" style={{borderRadius: '100px', background: '#EEF4FF', fontSize: '20px', color: '#518EF8'}}>
-            <p className="text-center py-1">6</p>
+            <p className="circle text-center" style={{padding: '3px'}}>6</p>
           </span>
 
           <span className="my-auto" style={{height: '1px',width: '42%', border: '1px solid rgba(36, 64, 143, 0.15)', background: 'rgba(36, 64, 143, 0.15)'}}>
@@ -155,7 +155,7 @@ const Checkboxes = () => {
           </span>
 
           <span className="circle" style={{borderRadius: '100px', background: '#EEF4FF', fontSize: '20px', color: '#518EF8'}}>
-            <p className="text-center py-1">7</p>
+            <p className="circle text-center" style={{padding: '3px'}}>7</p>
           </span>
 
           <span className="my-auto" style={{height: '1px',width: '42%'}}>

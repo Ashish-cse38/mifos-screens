@@ -16,12 +16,15 @@ const Principal = (props) => {
     <div className="container">
       <div 
         id={props.id}
-        className="row">
+        className="row py-2">
         <div className="col-md-5">
           <div class="form-group">
-          <label>
-            <h6>Payment Type</h6>
-          </label>
+            {props.array.length == 0 ? 
+              <label>
+               Payment Type
+               <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+              </label> : ''
+            }
           <select 
             className="custom-select px-3"
             //value={lck_in}
@@ -32,7 +35,7 @@ const Principal = (props) => {
               border: '0.5px solid rgba(10, 33, 62, 0.15)',
               borderRadius: '5px',
             }}>
-            <option selected>On Whole Team</option>
+            <option selected>Select</option>
             <option value="1">One</option>
             <option value="2">Two</option>
             <option value="3">Three</option>
@@ -41,10 +44,13 @@ const Principal = (props) => {
         </div>
 
         <div className="col-md-5">
-        <div class="form-group">
-          <label>
-            <h6>Fund Sources</h6>
-          </label>
+          <div class="form-group">
+            {props.array.length == 0 ? 
+              <label>
+               Fund Sources
+               <FontAwesomeIcon className="icon ml-3" icon={faInfoCircle} />
+              </label> : ''
+            } 
             <select 
               className="custom-select px-3"
               //value={lck_in}
@@ -55,22 +61,22 @@ const Principal = (props) => {
                 border: '0.5px solid rgba(10, 33, 62, 0.15)',
                 borderRadius: '5px',
               }}>
-              <option selected>On Whole Team</option>
+              <option selected>Select</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
-            </div>
+          </div>
         </div>
 
-        <div className="col-md-1 w-auto mt-4 mx-auto" style={{color:'#FD5E1A'}}>
+        <div className="col-md-1 w-auto mx-auto" style={{color:'#FD5E1A'}}>
         <div class="form-group">
           {props.array.length >= 1 ?
-          <div className="mt-4">
+          <div className="mt-1">
             <FontAwesomeIcon 
               onClick={() => {document.getElementById(props.id).remove();}}
               icon={faTimesCircle} 
-              style={{color: '#FD5E1A', fontSize: '22px'}}/>
+              style={{color: '#FD5E1A', fontSize: '22px', cursor: 'pointer'}}/>
           </div> : ''
           }
         </div>
@@ -82,7 +88,7 @@ const Principal = (props) => {
   );
 }
 
-function RDP_AccountingTab() {
+const RDP_AccountingTab = () => {
 
   let history = useHistory();
   const [apply_pi, set_apply_pi] = useState('none');
@@ -94,8 +100,8 @@ function RDP_AccountingTab() {
     history.push('/rdp-charges');
   } 
 
-  function goto_CRDP_preview() {
-    history.push('/crdp-preview');
+  function goto_RDP_preview() {
+    history.push('/rdp-preview');
   }
   
   function API_div() {
@@ -420,7 +426,7 @@ function RDP_AccountingTab() {
                     Previous
                   </Button>
                   <Button 
-                    onClick={goto_CRDP_preview}
+                    onClick={goto_RDP_preview}
                     className="py-2 btn-next border-0 rounded font-weight-semibold"
                   >
                     Preview

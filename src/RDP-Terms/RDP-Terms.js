@@ -8,7 +8,7 @@ import { faArrowLeft, faArrowRight, faCheck, faInfoCircle, faTimes } from '@fort
 import { motion } from 'framer-motion';
 import Checkboxes from './Checkbox';
 
-function RDP_Terms() {
+const RDP_Terms = () => {
 
   let history = useHistory();
   const [def_amt, setDef_amt] = useState('');

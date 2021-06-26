@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faEdit, faChevronRight, faTrash, faTrashAlt, faSave } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
-function Edit_charge() {
+const Edit_charge = () => {
 
   return (
     
@@ -17,7 +17,6 @@ function Edit_charge() {
       <h5 className="py-4">
         Edit Charge
       </h5>
-
       
       <motion.div
         className="mx-auto pb-4 mb-4"
