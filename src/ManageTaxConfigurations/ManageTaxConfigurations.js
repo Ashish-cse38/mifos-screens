@@ -62,7 +62,7 @@ const ManageTaxConfigurations = () => {
         transition={{ delay: 0.5 }}
       >
 
-        <div className="d-flex flex-wrap jsutify-content-between">
+        <div className="d-flex flex-wrap">
           <div 
             onClick={() => {history.push('/manage-tax-components')}}
             className="pr-4 pb-4"
