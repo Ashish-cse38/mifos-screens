@@ -2,18 +2,18 @@ import * as React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './ManageTaxConfigurations.scss';
 import { useHistory } from 'react-router-dom';
-import Table from 'react-bootstrap/Table';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { motion } from 'framer-motion';
 import GS from './greenSetting.png';
 import RMB from './redMoneyBag.png';
 
-const ManageTaxConfiguration = ({Name, Detail, Icon, Background}) => {
-  
+const ManageTaxConfiguration = ({Address, Name, Detail, Icon, Background}) => {
+  let history = useHistory();
+
   return(
     <div 
       className="bg-white py-3"
-      style={{width: '350px', borderRadius: '15px'}}
+      style={{width: '350px', borderRadius: '15px', cursor: 'pointer'}}
+      onClick={() => {history.push(Address)}}
     >
       <div className="col">
         <div className="row">
@@ -44,8 +44,6 @@ const ManageTaxConfiguration = ({Name, Detail, Icon, Background}) => {
 }
 
 const ManageTaxConfigurations = () => {
-  let history = useHistory();
-
   return(
     <div 
         id="Products"
@@ -64,10 +62,10 @@ const ManageTaxConfigurations = () => {
 
         <div className="d-flex flex-wrap">
           <div 
-            onClick={() => {history.push('/manage-tax-components')}}
             className="pr-4 pb-4"
           >
             <ManageTaxConfiguration 
+              Address="/manage-tax-components"
               Name="Manage Tax Components" 
               Detail="Define Tax Components" 
               Icon={RMB} 
@@ -76,7 +74,7 @@ const ManageTaxConfigurations = () => {
           <div 
             className="pr-4 pb-4"
           >
-            <ManageTaxConfiguration 
+            <ManageTaxConfiguration
               Name="Manage Tax Groups" 
               Detail="Define Tax Groups" 
               Icon={GS} 

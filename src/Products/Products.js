@@ -13,11 +13,14 @@ import GC from './greenCassette.png';
 import PS from './purpleSetting.png';
 import YC from './yellowCassette.png';
 
-const Product = ({Name, Detail, Icon, Background}) => {
+const Product = ({Address, Name, Detail, Icon, Background}) => {
+  let history = useHistory();
+
   return(
     <div 
       className="bg-white py-3"
-      style={{width: '350px', borderRadius: '15px'}}
+      style={{width: '350px', borderRadius: '15px', cursor: 'pointer'}}
+      onClick={() => {history.push(Address)}}
     >
       <div className="col">
         <div className="row">
@@ -48,7 +51,6 @@ const Product = ({Name, Detail, Icon, Background}) => {
 }
 
 const Products = () => {
-  let history = useHistory();
   return(
     <div 
         id="Products"
@@ -66,83 +68,88 @@ const Products = () => {
 
         <div className="d-flex flex-wrap justify-content-between">
           <div 
-            onClick={() => {history.push('/loan-products')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address='/loan-products'
               Name="Loan product" 
               Detail="Add new loan product or modify or inactivate loan products." 
               Icon={GMB} 
               Background="rgba(10, 157, 122, 0.1)"/>
           </div>
-          <div className="pr-4 pb-4">
-            <Product Name="Product Mix" Detail="Define rules for taking multiple rules." Icon={RCI} Background="rgba(244, 190, 44, 0.1)"/>
+          <div 
+            className="pr-4 pb-4"
+          >
+            <Product Name="Product Mix" 
+              Detail="Define rules for taking multiple rules." 
+              Icon={RCI} 
+              Background="rgba(253, 94, 26, 0.1)"/>
           </div>
           <div 
-            onClick={() => {history.push('/saving-products')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address='/saving-products'
               Name="Saving Products" 
               Detail="Add new savings products or modify or inactivate savings products" 
               Icon={BL} 
               Background="rgba(0, 180, 216, 0.1)"/>
           </div>
           <div 
-            onClick={() => {history.push('/fixed-deposit-products')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address="/fixed-deposit-products"
               Name="Fixed Deposit Products" 
               Detail="Add, modify or inactivat a fixed deposit products" 
               Icon={PL} 
               Background="rgba(114, 78, 145, 0.1)"/>
           </div>
           <div 
-            onClick={() => {history.push('/share-products')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address="/share-products"
               Name="Share Products" 
               Detail="Add new share product or modify or inactivate share products" 
               Icon={PiL} 
               Background="rgba(224, 59, 139, 0.1)"/>
           </div>
           <div 
-            onClick={() => {history.push('/recurring-deposit-products')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address="/recurring-deposit-products"
               Name="Recurring Deposit Products" 
               Detail="Add, modify or inactivate recurring deposit products" 
               Icon={GL} 
               Background="rgba(78, 205, 196, 0.15)"/>
           </div>
           <div 
-            onClick={() => {history.push('/charges')}}
             className="pr-4 pb-4"
           >
-            <Product 
+            <Product
+              Address="/charges"
               Name="Charges" 
               Detail="Define charges / penalties for loan products, Savings and deposit products." 
               Icon={GC} 
               Background="rgba(53, 114, 102, 0.1)"/>
           </div>
           <div 
-            onClick={() => {history.push('/manage-tax-configurations')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address="/manage-tax-configurations"
               Name="Manage Tax Configurations" 
               Detail="Define Tax components and tax groups" 
               Icon={PS} 
               Background="rgba(114, 78, 145, 0.1)"/>
           </div>
           <div 
-            onClick={() => {history.push('/floating-rates')}}
             className="pr-4 pb-4"
           >
             <Product 
+              Address="/floating-rates"
               Name="Floating Rates" 
               Detail="Define floating rates for loan products" 
               Icon={YC} 
