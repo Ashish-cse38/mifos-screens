@@ -16,7 +16,6 @@ import RDP_AccountingTab from './RDP-AccountingTab/RDP-AccountingTab';
 import RDP_Preview from './RDP-Preview/RDP-Preview';
 import Charges_list from './Charges_list/Charges_list';
 import Charge_details from './Charge_details/Charge_details';
-import Edit_charge from './Edit_charge/Edit_charge';
 import FloatingRates from './FloatingRates/FloatingRates';
 import FloatingRateDetails from './FloatingRateDetails/FloatingRateDetails';
 import ManageTaxComponents from './ManageTaxComponents/ManageTaxComponents';
@@ -84,8 +83,6 @@ function App() {
         <Route path="/charges" component={Charges_list} />
 
         <Route path="/charge-details" component={Charge_details} />
-
-        <Route path="/edit-charge" component={Edit_charge} />
 
         <Route path="/floating-rates" component={FloatingRates} />
 
